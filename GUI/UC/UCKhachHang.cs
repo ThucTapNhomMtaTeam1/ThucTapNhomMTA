@@ -296,5 +296,10 @@ namespace GUI.UC
                 }
             }
         }
+
+        private void gvDanhSachKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

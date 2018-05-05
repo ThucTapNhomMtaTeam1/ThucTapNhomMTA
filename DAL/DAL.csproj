@@ -46,6 +46,7 @@
     <Compile Include="HienThiKhoHangDAL.cs" />
     <Compile Include="HienThiLoaiKhachHangDAL.cs" />
     <Compile Include="HienThiLoaiSanPhamDAL.cs" />
+    <Compile Include="HienThiMatKhauDAL.cs" />
     <Compile Include="HienThiNhaCungCapDAL.cs" />
     <Compile Include="HienThiNhanVienDAL.cs" />
     <Compile Include="HienThiNhaSanXuatDAL.cs" />

@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormDangNhap\FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap\FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     <Compile Include="UC\UCSanPham.Designer.cs">
       <DependentUpon>UCSanPham.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDangNhap\FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyBanHang.resx">
       <DependentUpon>frmQuanLyBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,7 +282,10 @@
   <ItemGroup>
     <Content Include="Resources\128px-Crystal_Clear_action_exit.svg.png" />
     <Content Include="Resources\128px-Crystal_Clear_action_exit.svg1.png" />
+    <None Include="Resources\128px-Crystal_Clear_action_exit.svg11.png" />
+    <None Include="Resources\128px-Crystal_Clear_action_exit.svg2.png" />
     <Content Include="Resources\16455696_smartphone-icon-donordrive.png" />
+    <None Include="Resources\1974343596_car_keys.png" />
     <Content Include="Resources\1_030.png" />
     <Content Include="Resources\Actions-window-close-icon.png" />
     <Content Include="Resources\Actions-window-close-icon1.png" />
@@ -281,6 +293,7 @@
     <Content Include="Resources\BaoHanhSp.png" />
     <Content Include="Resources\bút.png" />
     <Content Include="Resources\catalog-icon.png" />
+    <None Include="Resources\check-icon--.png" />
     <Content Include="Resources\Class.png" />
     <Content Include="Resources\close_blue.png" />
     <Content Include="Resources\Delete.png" />
@@ -294,6 +307,7 @@
     <None Include="Resources\IconGioiThieu.png" />
     <None Include="Resources\iconlogin.png" />
     <None Include="Resources\iconDienThoai.png" />
+    <None Include="Resources\icon-ks-10.png" />
     <Content Include="Resources\invoice-manager-icon.png" />
     <Content Include="Resources\iPhoto.png" />
     <Content Include="Resources\kho-hang.png" />

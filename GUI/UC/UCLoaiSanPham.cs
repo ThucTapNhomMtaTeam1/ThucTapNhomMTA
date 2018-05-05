@@ -159,5 +159,10 @@ namespace GUI.UC
                 HienThiDanhSachLoaiSP(); 
             }
         }
+
+        private void gvLoaiSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

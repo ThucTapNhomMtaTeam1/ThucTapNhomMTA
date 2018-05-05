@@ -16,5 +16,10 @@ namespace GUI.UC
         {
             InitializeComponent();
         }
+
+        private void UCHoaDonBaoHanh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -118,8 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Shopping cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shopping cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Class" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Class.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-ks-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-ks-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NhanVien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NhanVien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +148,17 @@
   <data name="GetArticleImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GetArticleImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="128px-Crystal_Clear_action_exit.svg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\128px-Crystal_Clear_action_exit.svg11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="invoice-manager-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invoice-manager-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Product Key Finder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Product Key Finder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check-icon--" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check-icon--.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HoiDap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HoiDap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,9 +208,6 @@
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="128px-Crystal_Clear_action_exit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\128px-Crystal_Clear_action_exit.svg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="doi_tac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doi_tac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,10 +232,16 @@
   <data name="House" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\House.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shopping cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shopping cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Thoát" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thoát.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="128px-Crystal_Clear_action_exit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\128px-Crystal_Clear_action_exit.svg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1974343596_car_keys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1974343596_car_keys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="128px-Crystal_Clear_action_exit2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\128px-Crystal_Clear_action_exit.svg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GUI.UC; 
+using GUI.UC;
+using GUI.FormDangNhap;
+
 namespace GUI
 {
     public partial class frmQuanLyBanHang : DevComponents.DotNetBar.Office2007RibbonForm
@@ -205,6 +207,28 @@ namespace GUI
         {
             UCKhoHang uCKhoHang = new UCKhoHang();
             addtab("Kho Hàng", uCKhoHang);
+        }
+
+        private void btnThoatHeThong_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn Muốn Thoát Khỏi Hệ Thống", "Xác Nhận",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn Muốn Đăng Xuất Khỏi Hệ Thống", "Xác Nhận",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                FrmDangNhap frmDangNhap = new FrmDangNhap();
+                frmDangNhap.Show();
+                this.Hide(); 
+            }
         }
     }
 }

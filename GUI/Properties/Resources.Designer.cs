@@ -83,6 +83,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _128px_Crystal_Clear_action_exit_svg1 {
+            get {
+                object obj = ResourceManager.GetObject("128px-Crystal_Clear_action_exit.svg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _128px_Crystal_Clear_action_exit1 {
             get {
                 object obj = ResourceManager.GetObject("128px-Crystal_Clear_action_exit1", resourceCulture);
@@ -93,9 +103,29 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _128px_Crystal_Clear_action_exit2 {
+            get {
+                object obj = ResourceManager.GetObject("128px-Crystal_Clear_action_exit2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _16455696_smartphone_icon_donordrive {
             get {
                 object obj = ResourceManager.GetObject("16455696_smartphone-icon-donordrive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1974343596_car_keys {
+            get {
+                object obj = ResourceManager.GetObject("1974343596_car_keys", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +186,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap catalog_icon {
             get {
                 object obj = ResourceManager.GetObject("catalog-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_icon__ {
+            get {
+                object obj = ResourceManager.GetObject("check-icon--", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +296,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap icon_contract {
             get {
                 object obj = ResourceManager.GetObject("icon-contract", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_ks_10 {
+            get {
+                object obj = ResourceManager.GetObject("icon-ks-10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessDataBase.cs" />
+    <Compile Include="HienThiBaoHanhDAL .cs" />
     <Compile Include="HienThiKhachHangDAL.cs" />
     <Compile Include="HienThiKhoHangDAL.cs" />
     <Compile Include="HienThiLoaiKhachHangDAL.cs" />

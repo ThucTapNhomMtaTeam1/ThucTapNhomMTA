@@ -160,7 +160,51 @@ namespace GUI
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            
+            UCNhanVien uCNhanVien = new UCNhanVien();
+            addtab("Nhân Viên", uCNhanVien); 
+        }
+
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        {
+            UCNhaCungCap uCNhaCungCap = new UCNhaCungCap();
+            addtab("Nhà Cung Cấp", uCNhaCungCap); 
+        }
+
+        private void btnBaoHanh_Click(object sender, EventArgs e)
+        {
+            UCBaoHanhSanPham uCBaoHanhSanPham = new UCBaoHanhSanPham();
+            addtab("Bảo Hành", uCBaoHanhSanPham); 
+
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            UCKhachHang uCKhachHang = new UCKhachHang();
+            addtab("Khách Hàng", uCKhachHang);
+        }
+
+        private void btnloaiKhachHang_Click(object sender, EventArgs e)
+        {
+            UCLoaiKhacHang uCLoaiKhacHang = new UCLoaiKhacHang();
+            addtab("Loại Khách Hàng", uCLoaiKhacHang);
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            UCSanPham uCSanPham = new UCSanPham();
+            addtab("Sản Phẩm", uCSanPham); 
+        }
+
+        private void btnLoaiSanPham_Click(object sender, EventArgs e)
+        {
+            UCLoaiSanPham uCLoaiSanPham = new UCLoaiSanPham();
+            addtab("Loại Sản Phẩm", uCLoaiSanPham);
+        }
+
+        private void btbKhoHang_Click(object sender, EventArgs e)
+        {
+            UCKhoHang uCKhoHang = new UCKhoHang();
+            addtab("Kho Hàng", uCKhoHang);
         }
     }
 }

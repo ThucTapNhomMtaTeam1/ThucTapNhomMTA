@@ -1304,6 +1304,7 @@
             this.btbKhoHang.Name = "btbKhoHang";
             this.btbKhoHang.SubItemsExpandWidth = 14;
             this.btbKhoHang.Text = "<div align = \"center\" width = \"70\"></div>";
+            this.btbKhoHang.Click += new System.EventHandler(this.btbKhoHang_Click);
             // 
             // btnLoaiSanPham
             // 
@@ -1313,6 +1314,7 @@
             this.btnLoaiSanPham.Name = "btnLoaiSanPham";
             this.btnLoaiSanPham.SubItemsExpandWidth = 14;
             this.btnLoaiSanPham.Text = "<div align = \"center\" width = \"70\"></div>";
+            this.btnLoaiSanPham.Click += new System.EventHandler(this.btnLoaiSanPham_Click);
             // 
             // btnSanPham
             // 
@@ -1322,6 +1324,7 @@
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.SubItemsExpandWidth = 14;
             this.btnSanPham.Text = "<div align = \"center\" width = \"70\"></div>";
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnloaiKhachHang
             // 
@@ -1331,6 +1334,7 @@
             this.btnloaiKhachHang.Name = "btnloaiKhachHang";
             this.btnloaiKhachHang.SubItemsExpandWidth = 14;
             this.btnloaiKhachHang.Text = "<div align = \"center\" width = \"80\"></div>";
+            this.btnloaiKhachHang.Click += new System.EventHandler(this.btnloaiKhachHang_Click);
             // 
             // btnKhachHang
             // 
@@ -1340,6 +1344,7 @@
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.SubItemsExpandWidth = 14;
             this.btnKhachHang.Text = "<div align = \"center\" width = \"70\"></div>";
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnNhanVien
             // 
@@ -1359,6 +1364,7 @@
             this.btnBaoHanh.Name = "btnBaoHanh";
             this.btnBaoHanh.SubItemsExpandWidth = 14;
             this.btnBaoHanh.Text = "<div align = \"center\" width = \"70\"></div>";
+            this.btnBaoHanh.Click += new System.EventHandler(this.btnBaoHanh_Click);
             // 
             // btnNhaCungCap
             // 
@@ -1368,6 +1374,7 @@
             this.btnNhaCungCap.Name = "btnNhaCungCap";
             this.btnNhaCungCap.SubItemsExpandWidth = 14;
             this.btnNhaCungCap.Text = "<div align = \"center\" width = \"70\"></div>";
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // btnNhaSanSuat
             // 

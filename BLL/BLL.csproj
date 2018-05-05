@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HienThiBaoHanhBLL.cs" />
     <Compile Include="HienThiKhachHangBLL.cs" />
     <Compile Include="HienThiKhoHangBLL.cs" />
     <Compile Include="HienThiLoaiKhachHangBLL.cs" />

@@ -92,6 +92,12 @@
     <Compile Include="UC\UCNhanVien.Designer.cs">
       <DependentUpon>UCNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSanPham.Designer.cs">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmQuanLyBanHang.resx">
       <DependentUpon>frmQuanLyBanHang.cs</DependentUpon>
     </EmbeddedResource>

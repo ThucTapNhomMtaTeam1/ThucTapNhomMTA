@@ -106,6 +106,7 @@
             this.MenuItemDongTrangKhac = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemDongTatCa = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemThoat = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxItem1 = new DevComponents.DotNetBar.TextBoxItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
@@ -128,8 +129,8 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
@@ -140,7 +141,8 @@
             this.ribbonTabItem3,
             this.ribbonTabItem4,
             this.ribbonTabItem5,
-            this.ribbonTabItem6});
+            this.ribbonTabItem6,
+            this.textBoxItem1});
             this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.ribbonControl1.Location = new System.Drawing.Point(5, 1);
             this.ribbonControl1.Name = "ribbonControl1";
@@ -1334,6 +1336,7 @@
             this.btnNguoiDung.Name = "btnNguoiDung";
             this.btnNguoiDung.SubItemsExpandWidth = 14;
             this.btnNguoiDung.Text = "<div align = \"center\" width = \"70\"></div>";
+            this.btnNguoiDung.Click += new System.EventHandler(this.btnNguoiDung_Click);
             // 
             // btnPhanQuyen
             // 
@@ -1445,6 +1448,12 @@
             this.MenuItemThoat.Size = new System.Drawing.Size(176, 22);
             this.MenuItemThoat.Text = "Thoát ";
             // 
+            // textBoxItem1
+            // 
+            this.textBoxItem1.Name = "textBoxItem1";
+            this.textBoxItem1.Text = "Xin Chào : Phan Đình Kiên ";
+            this.textBoxItem1.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
             // frmQuanLyBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1551,5 +1560,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemDongTatCa;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem MenuItemThoat;
+        private DevComponents.DotNetBar.TextBoxItem textBoxItem1;
     }
 }

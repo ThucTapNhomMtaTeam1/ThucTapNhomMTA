@@ -230,5 +230,11 @@ namespace GUI
                 this.Hide(); 
             }
         }
+
+        private void btnNguoiDung_Click(object sender, EventArgs e)
+        {
+            UCNguoiDung uCNguoiDung = new UCNguoiDung();
+            addtab("Người Dùng", uCNguoiDung); 
+        }
     }
 }

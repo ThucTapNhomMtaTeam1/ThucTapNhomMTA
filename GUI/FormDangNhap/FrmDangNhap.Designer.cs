@@ -162,6 +162,7 @@
             this.TexPass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TexPass.Location = new System.Drawing.Point(111, 56);
             this.TexPass.Name = "TexPass";
+            this.TexPass.PasswordChar = '*';
             this.TexPass.Size = new System.Drawing.Size(193, 22);
             this.TexPass.TabIndex = 2;
             // 
@@ -218,6 +219,7 @@
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.buttonX1);
             this.Name = "FrmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDangNhap";
             this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             this.groupPanel1.ResumeLayout(false);

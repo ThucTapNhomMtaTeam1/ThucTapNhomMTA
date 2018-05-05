@@ -80,17 +80,101 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\UCBaoHanhSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCBaoHanhSanPham.Designer.cs">
+      <DependentUpon>UCBaoHanhSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCDanhSachBaoHanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCDanhSachBaoHanh.Designer.cs">
+      <DependentUpon>UCDanhSachBaoHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCHoaDonBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCHoaDonBanHang.Designer.cs">
+      <DependentUpon>UCHoaDonBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCHoaDonBaoHanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCHoaDonBaoHanh.Designer.cs">
+      <DependentUpon>UCHoaDonBaoHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCHoaDonNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCHoaDonNhap.Designer.cs">
+      <DependentUpon>UCHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCHoaDonNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCHoaDonNhapHang.Designer.cs">
+      <DependentUpon>UCHoaDonNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCKhachHang.Designer.cs">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCKhoHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCKhoHang.Designer.cs">
       <DependentUpon>UCKhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCLoaiKhacHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCLoaiKhacHang.Designer.cs">
+      <DependentUpon>UCLoaiKhacHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCLoaiSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCLoaiSanPham.Designer.cs">
+      <DependentUpon>UCLoaiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCMatKhau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCMatKhau.Designer.cs">
+      <DependentUpon>UCMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCNguoiDung.Designer.cs">
+      <DependentUpon>UCNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCNhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCNhaCungCap.Designer.cs">
+      <DependentUpon>UCNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCNhanVien.Designer.cs">
       <DependentUpon>UCNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCNhaSanXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCNhaSanXuat.Designer.cs">
+      <DependentUpon>UCNhaSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCPhanQuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCPhanQuyen.Designer.cs">
+      <DependentUpon>UCPhanQuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCSanPham.cs">
       <SubType>UserControl</SubType>
@@ -111,11 +195,56 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\UCBaoHanhSanPham.resx">
+      <DependentUpon>UCBaoHanhSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCDanhSachBaoHanh.resx">
+      <DependentUpon>UCDanhSachBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCHoaDonBanHang.resx">
+      <DependentUpon>UCHoaDonBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCHoaDonBaoHanh.resx">
+      <DependentUpon>UCHoaDonBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCHoaDonNhap.resx">
+      <DependentUpon>UCHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCHoaDonNhapHang.resx">
+      <DependentUpon>UCHoaDonNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCKhachHang.resx">
+      <DependentUpon>UCKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCKhoHang.resx">
       <DependentUpon>UCKhoHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCLoaiKhacHang.resx">
+      <DependentUpon>UCLoaiKhacHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCLoaiSanPham.resx">
+      <DependentUpon>UCLoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCMatKhau.resx">
+      <DependentUpon>UCMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCNguoiDung.resx">
+      <DependentUpon>UCNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCNhaCungCap.resx">
+      <DependentUpon>UCNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCNhanVien.resx">
       <DependentUpon>UCNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCNhaSanXuat.resx">
+      <DependentUpon>UCNhaSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCPhanQuyen.resx">
+      <DependentUpon>UCPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCSanPham.resx">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

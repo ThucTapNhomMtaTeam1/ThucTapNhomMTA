@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.UC; 
-
 namespace GUI
 {
     public partial class frmQuanLyBanHang : DevComponents.DotNetBar.Office2007RibbonForm
@@ -145,6 +144,8 @@ namespace GUI
 
         private void btnNhaSanSuat_Click(object sender, EventArgs e)
         {
+            UCNhaSanXuat uCNhaSanXuat = new UCNhaSanXuat();
+            addtab("Nhà Sản Xuất", uCNhaSanXuat); 
         }
 
         private void ribbonTabItem1_Click(object sender, EventArgs e)
@@ -159,8 +160,7 @@ namespace GUI
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            UCNhanVien uCNhanVien = new UCNhanVien();
-            addtab("Nhân Viên",uCNhanVien); 
+            
         }
     }
 }

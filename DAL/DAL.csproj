@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AccessDataBase.cs" />
+    <Compile Include="HienThiKhachHangDAL.cs" />
+    <Compile Include="HienThiKhoHangDAL.cs" />
+    <Compile Include="HienThiLoaiKhachHangDAL.cs" />
+    <Compile Include="HienThiLoaiSanPhamDAL.cs" />
+    <Compile Include="HienThiNhaCungCapDAL.cs" />
+    <Compile Include="HienThiNhanVienDAL.cs" />
+    <Compile Include="HienThiNhaSanXuatDAL.cs" />
+    <Compile Include="HienThiSanPhamDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

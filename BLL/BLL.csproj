@@ -41,6 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HienThiKhachHangBLL.cs" />
+    <Compile Include="HienThiKhoHangBLL.cs" />
+    <Compile Include="HienThiLoaiKhachHangBLL.cs" />
+    <Compile Include="HienThiLoaiSanPhamBLL.cs" />
+    <Compile Include="HienThiNhaCungCapBLL.cs" />
+    <Compile Include="HienThiNhanVienBLL.cs" />
+    <Compile Include="HienThiNhaSanXuatBLL.cs" />
+    <Compile Include="HienThiSanPhamBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

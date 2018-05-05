@@ -236,5 +236,12 @@ namespace GUI
             UCNguoiDung uCNguoiDung = new UCNguoiDung();
             addtab("Người Dùng", uCNguoiDung); 
         }
+
+        private void btnThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            UCThongTin uCThongTin = new UCThongTin();
+            addtab("Thông Tin", uCThongTin);
+
+        }
     }
 }

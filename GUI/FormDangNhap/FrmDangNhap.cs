@@ -38,6 +38,7 @@ namespace GUI.FormDangNhap
             {
                 
                 frmQuanLyBanHang frmQuanLyBanHang = new frmQuanLyBanHang();
+                frmQuanLyBanHang.Text = "Xin Chào : " + LayThongTinTaiKhoan(taiKhoan.TenTaiKhoan); 
                 frmQuanLyBanHang.Show();
                 this.Hide(); 
             }
@@ -50,6 +51,19 @@ namespace GUI.FormDangNhap
             frmDangNhap.Close(); 
 
         }
+
+        private string LayThongTinTaiKhoan(string TenTaiKhoan)
+        {
+            string TenNguoiDung = null; 
+            HienThiMatKhauBLL hienThiMatKhauBLL = new HienThiMatKhauBLL();
+            foreach(TaiKhoan taikhoan in hienThiMatKhauBLL.HienThiTaiKhoanTheoTen(TenTaiKhoan))
+            {
+                 TenNguoiDung = taikhoan.TenDayDu;
+                break; 
+            }
+            return TenNguoiDung; 
+        }
+        
 
         private void btnThoát_Click(object sender, EventArgs e)
         {

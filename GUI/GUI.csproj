@@ -78,6 +78,7 @@
     <Compile Include="FormDangNhap\FrmDangNhap.Designer.cs">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDangNhap\NguoiDung.cs" />
     <Compile Include="frmQuanLyBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +189,12 @@
     <Compile Include="UC\UCSanPham.Designer.cs">
       <DependentUpon>UCSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCThongTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCThongTin.Designer.cs">
+      <DependentUpon>UCThongTin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormDangNhap\FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSanPham.resx">
       <DependentUpon>UCSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCThongTin.resx">
+      <DependentUpon>UCThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

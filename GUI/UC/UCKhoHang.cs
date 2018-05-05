@@ -176,5 +176,10 @@ namespace GUI.UC
         {
             HienThiDanhSachKhoHang(); 
         }
+
+        private void gvDanhSachKhoHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

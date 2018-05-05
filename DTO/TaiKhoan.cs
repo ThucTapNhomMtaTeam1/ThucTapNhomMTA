@@ -18,6 +18,27 @@ namespace DTO
             get;
             set;
         }
+        public string TenDayDu
+        {
+            get;
+            set; 
+        }
+        public string GioiTinh
+        {
+            get;
+            set;
+        }
+        public string DienThoai
+        {
+            get;
+            set;
+        }
+
+        public bool HienThi
+        {
+            get;
+            set;
+        }
 
     }
 }

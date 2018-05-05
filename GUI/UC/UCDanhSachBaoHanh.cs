@@ -16,5 +16,10 @@ namespace GUI.UC
         {
             InitializeComponent();
         }
+
+        private void gvBaoHanh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

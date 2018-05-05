@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarKhoHang = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -52,6 +52,7 @@
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnDanhSach = new DevComponents.DotNetBar.ButtonX();
             this.buttonTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.radiotenKho = new System.Windows.Forms.RadioButton();
             this.radioMaKho = new System.Windows.Forms.RadioButton();
@@ -92,7 +93,6 @@
             this.TenKhoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDanhSach = new DevComponents.DotNetBar.ButtonX();
             this.dockSite1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.bar1.SuspendLayout();
@@ -152,10 +152,10 @@
             this.dockSite1.Controls.Add(this.bar1);
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 355, 759)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 388, 759)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.dockSite1.Location = new System.Drawing.Point(0, 0);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(358, 759);
+            this.dockSite1.Size = new System.Drawing.Size(391, 759);
             this.dockSite1.TabIndex = 0;
             this.dockSite1.TabStop = false;
             // 
@@ -174,7 +174,7 @@
             this.bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(355, 759);
+            this.bar1.Size = new System.Drawing.Size(388, 759);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
@@ -186,7 +186,7 @@
             this.panelDockContainer1.Controls.Add(this.splitContainer2);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(349, 733);
+            this.panelDockContainer1.Size = new System.Drawing.Size(382, 733);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -208,7 +208,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupPanel4);
-            this.splitContainer2.Size = new System.Drawing.Size(349, 733);
+            this.splitContainer2.Size = new System.Drawing.Size(382, 733);
             this.splitContainer2.SplitterDistance = 395;
             this.splitContainer2.TabIndex = 3;
             // 
@@ -231,7 +231,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(349, 395);
+            this.groupPanel1.Size = new System.Drawing.Size(382, 395);
             // 
             // 
             // 
@@ -447,7 +447,7 @@
             this.groupPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupPanel4.Location = new System.Drawing.Point(0, 0);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(349, 334);
+            this.groupPanel4.Size = new System.Drawing.Size(382, 334);
             // 
             // 
             // 
@@ -478,6 +478,22 @@
             this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel4.TabIndex = 0;
             this.groupPanel4.Text = "Tìm Kiếm Loại Kho Hang";
+            // 
+            // btnDanhSach
+            // 
+            this.btnDanhSach.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDanhSach.Image = global::GUI.Properties.Resources.catalog_icon;
+            this.btnDanhSach.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnDanhSach.Location = new System.Drawing.Point(175, 149);
+            this.btnDanhSach.Name = "btnDanhSach";
+            this.btnDanhSach.Size = new System.Drawing.Size(127, 30);
+            this.btnDanhSach.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDanhSach.TabIndex = 11;
+            this.btnDanhSach.Text = " Danh Sách";
+            this.btnDanhSach.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.btnDanhSach.Click += new System.EventHandler(this.btnDanhSach_Click);
             // 
             // buttonTimKiem
             // 
@@ -963,47 +979,47 @@
             this.gvDanhSachKhoHang.AllowUserToDeleteRows = false;
             this.gvDanhSachKhoHang.AllowUserToResizeRows = false;
             this.gvDanhSachKhoHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvDanhSachKhoHang.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvDanhSachKhoHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvDanhSachKhoHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvDanhSachKhoHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvDanhSachKhoHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKhoHang,
             this.TenKhoHang,
             this.DiaChi,
             this.DiemThoai});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvDanhSachKhoHang.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvDanhSachKhoHang.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvDanhSachKhoHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvDanhSachKhoHang.EnableHeadersVisualStyles = false;
             this.gvDanhSachKhoHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.gvDanhSachKhoHang.Location = new System.Drawing.Point(358, 0);
+            this.gvDanhSachKhoHang.Location = new System.Drawing.Point(391, 0);
             this.gvDanhSachKhoHang.Name = "gvDanhSachKhoHang";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvDanhSachKhoHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvDanhSachKhoHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gvDanhSachKhoHang.RowHeadersVisible = false;
             this.gvDanhSachKhoHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvDanhSachKhoHang.Size = new System.Drawing.Size(1151, 759);
+            this.gvDanhSachKhoHang.Size = new System.Drawing.Size(1118, 759);
             this.gvDanhSachKhoHang.TabIndex = 8;
             this.gvDanhSachKhoHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDanhSachKhoHang_CellClick);
+            this.gvDanhSachKhoHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDanhSachKhoHang_CellContentClick);
             // 
             // MaKhoHang
             // 
@@ -1024,22 +1040,6 @@
             // 
             this.DiemThoai.HeaderText = "Điện Thoại";
             this.DiemThoai.Name = "DiemThoai";
-            // 
-            // btnDanhSach
-            // 
-            this.btnDanhSach.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhSach.Image = global::GUI.Properties.Resources.catalog_icon;
-            this.btnDanhSach.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnDanhSach.Location = new System.Drawing.Point(175, 149);
-            this.btnDanhSach.Name = "btnDanhSach";
-            this.btnDanhSach.Size = new System.Drawing.Size(127, 30);
-            this.btnDanhSach.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDanhSach.TabIndex = 11;
-            this.btnDanhSach.Text = " Danh Sách";
-            this.btnDanhSach.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.btnDanhSach.Click += new System.EventHandler(this.btnDanhSach_Click);
             // 
             // UCKhoHang
             // 

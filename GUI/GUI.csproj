@@ -105,6 +105,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\UCKhoHang.resx">
+      <DependentUpon>UCKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCNhanVien.resx">
       <DependentUpon>UCNhanVien.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.UC; 
 
 namespace GUI
 {
@@ -154,6 +155,12 @@ namespace GUI
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            UCNhanVien uCNhanVien = new UCNhanVien();
+            addtab("Nhân Viên",uCNhanVien); 
         }
     }
 }

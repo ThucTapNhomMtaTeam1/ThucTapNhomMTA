@@ -243,5 +243,22 @@ namespace GUI
             addtab("Thông Tin", uCThongTin);
 
         }
+
+        private void frmQuanLyBanHang_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn Muốn Đăng Xuất Khỏi Hệ Thống", "Xác Nhận",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                FrmDangNhap frmDangNhap = new FrmDangNhap();
+                frmDangNhap.Show();
+                this.Hide();
+            }
+        }
+
+        private void rbbThoatHeThong_ItemClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

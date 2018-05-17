@@ -55,5 +55,9 @@ namespace DTO
             get;
             set;
         }
+        public override string ToString()
+        {
+            return TenSanPham;
+        }
     }
 }

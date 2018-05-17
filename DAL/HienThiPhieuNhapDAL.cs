@@ -11,6 +11,7 @@ namespace DAL
 {
     public class HienThiPhieuNhapDAL:AccessDataBase
     {
+       // 
         public List<PhieuNhap> LayPhieuNhapTheoNgayThangNam(DateTime DateTime)
         {
             try
@@ -41,7 +42,7 @@ namespace DAL
                 throw ex;
             }
         }
-
+        //
         public bool ThemMoiPhieuNhap(PhieuNhap phieuNhap)
         {
             try
@@ -50,7 +51,7 @@ namespace DAL
                 OpenDataBase();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.CommandText = "ThemMoiThongTinPhieuNhap";
+                sqlCommand.CommandText = "ThemMoiPhieuNhap";
                 sqlCommand.Parameters.Add("@MaPhieuNhap", SqlDbType.Char).Value = phieuNhap.MaPhieuNhap;
                 sqlCommand.Parameters.Add("@MaNhanVien", SqlDbType.Char).Value = phieuNhap.NhanVien;
                 sqlCommand.Parameters.Add("@MaNhaCungCap", SqlDbType.Char).Value = phieuNhap.NhaCungCap;
@@ -64,7 +65,11 @@ namespace DAL
                 throw ex;
             }
         }
-        
+    
+
+
+
+        //
         public bool SuaThongTinPhieuNhap(PhieuNhap phieuNhap)
         {
             try
@@ -73,7 +78,7 @@ namespace DAL
                 OpenDataBase();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.CommandText = "CapNhapThongTinPhieuNhap";
+                sqlCommand.CommandText = "CapNhapThongTinPhieuNhaps";
                 sqlCommand.Parameters.Add("@MaPhieuNhap", SqlDbType.Char).Value = phieuNhap.MaPhieuNhap;
                 sqlCommand.Parameters.Add("@MaNhanVien", SqlDbType.Char).Value = phieuNhap.NhanVien;
                 sqlCommand.Parameters.Add("@MaNhaCungCap", SqlDbType.Char).Value = phieuNhap.NhaCungCap;
@@ -88,8 +93,8 @@ namespace DAL
                 throw ex;
             }
         }
-
-        public List<PhieuNhap> XoaThongTinPhieuNhap(string MaPhieuNhap)
+        //
+        public bool XoaThongTinPhieuNhap(string MaPhieuNhap)
         {
             try
             {
@@ -97,22 +102,11 @@ namespace DAL
                 OpenDataBase();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.CommandText = "XoaThongTinPhieuNhap";
+                sqlCommand.CommandText = "XoaThongTinPhieuNhaps";
                 sqlCommand.Parameters.Add("@MaPhieuNhap", SqlDbType.Char).Value = MaPhieuNhap;
                 sqlCommand.Connection = sqlConnection;
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-                while (sqlDataReader.Read())
-                {
-                    DanhSach.Add(new PhieuNhap
-                    {
-                        MaPhieuNhap = sqlDataReader[0].ToString(),
-                        NhanVien = sqlDataReader[1].ToString(),
-                        NhaCungCap = sqlDataReader[2].ToString(),
-                        NgayNhap = DateTime.Parse(sqlDataReader[3].ToString())
-                    });
-                }
-                sqlDataReader.Close();
-                return DanhSach;
+                int k = sqlCommand.ExecuteNonQuery();
+                return k > 0;
             }
             catch (Exception ex)
             {
@@ -211,5 +205,34 @@ namespace DAL
                 throw ex;
             }
         }
+
+
+        
+
+        //public int ThemMoiPhieuNhap(PhieuNhap phieuNhap)
+        //{
+        //    try
+        //    {
+                
+               
+        //        OpenDataBase();
+        //        SqlCommand sqlCommand = new SqlCommand();
+        //        sqlCommand.CommandType = CommandType.StoredProcedure;
+        //        sqlCommand.CommandText = "ThemMoiHoaDonNhap";
+        //        sqlCommand.Parameters.Add("@MaPhieuNhap", SqlDbType.Char).Value = phieuNhap.MaPhieuNhap;
+        //        sqlCommand.Parameters.Add("@MaNhanVien", SqlDbType.Char).Value = phieuNhap.MaNhanVien;
+        //        sqlCommand.Parameters.Add("@MaNhaCungCap", SqlDbType.Char).Value = phieuNhap.MaNhaCungCap;
+        //        sqlCommand.Parameters.Add("@NgayNhap", SqlDbType.DateTime).Value = phieuNhap.NgayNhap;
+        //        sqlCommand.Connection = sqlConnection;
+        //        int k = sqlCommand.ExecuteNonQuery();
+        //        return k > 0;
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
     }
 }

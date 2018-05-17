@@ -20,6 +20,19 @@ namespace DTO
             set; 
         }
 
+        public string MaNhanVien
+        {
+            get;
+            set; 
+        }
+
+        public string MaNhaCungCap
+
+        {
+            get;
+            set; 
+        }
+
         public string NhaCungCap
         {
             get;

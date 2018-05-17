@@ -266,5 +266,11 @@ namespace GUI
             UCHoaDonNhap uCHoaDonNhap = new UCHoaDonNhap();
             addtab("Hóa Đơn Nhập",uCHoaDonNhap); 
         }
+
+        private void btnHoaDonBan_Click(object sender, EventArgs e)
+        {
+            UCHoaDonBanHang uCHoaDonBanHang = new UCHoaDonBanHang();
+            addtab("Hóa Đơn Bán", uCHoaDonBanHang); 
+        }
     }
 }

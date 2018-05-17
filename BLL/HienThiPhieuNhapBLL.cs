@@ -15,5 +15,28 @@ namespace BLL
         {
             return HienThiPhieuNhapDAL.LayPhieuNhapTheoNgayThangNam(DateTime); 
         }
+        public bool ThemMoiPhieuNhap(PhieuNhap phieuNhap)
+        {
+           return  HienThiPhieuNhapDAL.ThemMoiPhieuNhap(phieuNhap); 
+        }
+        public List<PhieuNhap> HienThiToanBoDanhSachPhieuNhap()
+        {
+            return HienThiPhieuNhapDAL.HienThiToanBoDanhSachPhieuNhap(); 
+        }
+        public bool XoaThongTinPhieuNhap(string MaPhieuNhap)
+        {
+            if(MaPhieuNhap == null)
+            {
+                return false; 
+            }
+            return HienThiPhieuNhapDAL.XoaThongTinPhieuNhap(MaPhieuNhap); 
+        }
+
+        public bool ChinhSuaThongTinPhieuNhap(PhieuNhap phieuNhap)
+        {
+
+            return HienThiPhieuNhapDAL.SuaThongTinPhieuNhap(phieuNhap); 
+        }
+       
     }
 }

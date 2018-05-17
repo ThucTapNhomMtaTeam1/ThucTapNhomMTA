@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="HienThiBaoHanhBLL.cs" />
+    <Compile Include="HienThiCT_PhieuNhapBLL.cs" />
     <Compile Include="HienThiKhachHangBLL.cs" />
     <Compile Include="HienThiKhoHangBLL.cs" />
     <Compile Include="HienThiLoaiKhachHangBLL.cs" />
@@ -50,7 +50,9 @@
     <Compile Include="HienThiNhaCungCapBLL.cs" />
     <Compile Include="HienThiNhanVienBLL.cs" />
     <Compile Include="HienThiNhaSanXuatBLL.cs" />
+    <Compile Include="HienThiPhieuNhapBLL.cs" />
     <Compile Include="HienThiSanPhamBLL.cs" />
+    <Compile Include="LayNgayThangBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

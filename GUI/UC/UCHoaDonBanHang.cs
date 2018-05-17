@@ -36,5 +36,10 @@ namespace GUI.UC
         {
 
         }
+
+        private void panelEx3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

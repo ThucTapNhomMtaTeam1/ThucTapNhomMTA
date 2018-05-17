@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AccessDataBase.cs" />
     <Compile Include="HienThiBaoHanhDAL .cs" />
+    <Compile Include="HienThiCT_PhieuNhapDAL.cs" />
     <Compile Include="HienThiKhachHangDAL.cs" />
     <Compile Include="HienThiKhoHangDAL.cs" />
     <Compile Include="HienThiLoaiKhachHangDAL.cs" />
@@ -50,7 +51,9 @@
     <Compile Include="HienThiNhaCungCapDAL.cs" />
     <Compile Include="HienThiNhanVienDAL.cs" />
     <Compile Include="HienThiNhaSanXuatDAL.cs" />
+    <Compile Include="HienThiPhieuNhapDAL.cs" />
     <Compile Include="HienThiSanPhamDAL.cs" />
+    <Compile Include="LayNgayThangDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

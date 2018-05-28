@@ -174,10 +174,10 @@
             this.dockSite4.Controls.Add(this.bar2);
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar2, 1852, 287)))}, DevComponents.DotNetBar.eOrientation.Vertical);
-            this.dockSite4.Location = new System.Drawing.Point(0, 354);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar2, 1852, 258)))}, DevComponents.DotNetBar.eOrientation.Vertical);
+            this.dockSite4.Location = new System.Drawing.Point(0, 383);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(1852, 290);
+            this.dockSite4.Size = new System.Drawing.Size(1852, 261);
             this.dockSite4.TabIndex = 3;
             this.dockSite4.TabStop = false;
             // 
@@ -187,10 +187,10 @@
             this.dockSite1.Controls.Add(this.bar1);
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 301, 354)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 301, 383)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.dockSite1.Location = new System.Drawing.Point(0, 0);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(304, 354);
+            this.dockSite1.Size = new System.Drawing.Size(304, 383);
             this.dockSite1.TabIndex = 0;
             this.dockSite1.TabStop = false;
             // 
@@ -212,7 +212,7 @@
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
             this.bar1.SelectedDockTab = 0;
-            this.bar1.Size = new System.Drawing.Size(301, 354);
+            this.bar1.Size = new System.Drawing.Size(301, 383);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
@@ -224,7 +224,7 @@
             this.panelDockContainer3.Controls.Add(this.panelEx3);
             this.panelDockContainer3.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer3.Name = "panelDockContainer3";
-            this.panelDockContainer3.Size = new System.Drawing.Size(295, 303);
+            this.panelDockContainer3.Size = new System.Drawing.Size(295, 332);
             this.panelDockContainer3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -245,7 +245,7 @@
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
             this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(295, 303);
+            this.panelEx3.Size = new System.Drawing.Size(295, 332);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -338,7 +338,7 @@
             this.panelDockContainer1.Controls.Add(this.panelEx2);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(295, 303);
+            this.panelDockContainer1.Size = new System.Drawing.Size(295, 332);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -354,7 +354,7 @@
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx2.Location = new System.Drawing.Point(0, 0);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(295, 303);
+            this.panelEx2.Size = new System.Drawing.Size(295, 332);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -384,7 +384,7 @@
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite2.Location = new System.Drawing.Point(1852, 0);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 354);
+            this.dockSite2.Size = new System.Drawing.Size(0, 383);
             this.dockSite2.TabIndex = 1;
             this.dockSite2.TabStop = false;
             // 
@@ -474,7 +474,7 @@
             treeNode2,
             treeNode3});
             this.tvPhanLoaiHoaDon.SelectedImageIndex = 4;
-            this.tvPhanLoaiHoaDon.Size = new System.Drawing.Size(295, 303);
+            this.tvPhanLoaiHoaDon.Size = new System.Drawing.Size(295, 332);
             this.tvPhanLoaiHoaDon.TabIndex = 5;
             // 
             // imageList1
@@ -503,7 +503,7 @@
             this.bar2.Location = new System.Drawing.Point(0, 3);
             this.bar2.Name = "bar2";
             this.bar2.SelectedDockTab = 0;
-            this.bar2.Size = new System.Drawing.Size(1852, 287);
+            this.bar2.Size = new System.Drawing.Size(1852, 258);
             this.bar2.Stretch = true;
             this.bar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar2.TabIndex = 0;
@@ -540,7 +540,7 @@
             this.panelDockContainer4.Controls.Add(this.groupPanel1);
             this.panelDockContainer4.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer4.Name = "panelDockContainer4";
-            this.panelDockContainer4.Size = new System.Drawing.Size(1846, 261);
+            this.panelDockContainer4.Size = new System.Drawing.Size(1846, 232);
             this.panelDockContainer4.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer4.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer4.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -566,8 +566,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewX2);
-            this.splitContainer1.Size = new System.Drawing.Size(1548, 354);
-            this.splitContainer1.SplitterDistance = 581;
+            this.splitContainer1.Size = new System.Drawing.Size(1548, 383);
+            this.splitContainer1.SplitterDistance = 734;
             this.splitContainer1.TabIndex = 8;
             // 
             // dataGridViewX1
@@ -603,7 +603,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX1.Size = new System.Drawing.Size(581, 354);
+            this.dataGridViewX1.Size = new System.Drawing.Size(734, 383);
             this.dataGridViewX1.TabIndex = 0;
             // 
             // dataGridViewX2
@@ -639,7 +639,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewX2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewX2.Size = new System.Drawing.Size(963, 354);
+            this.dataGridViewX2.Size = new System.Drawing.Size(810, 383);
             this.dataGridViewX2.TabIndex = 0;
             // 
             // groupPanel1

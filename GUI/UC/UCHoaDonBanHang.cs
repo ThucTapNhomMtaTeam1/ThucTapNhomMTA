@@ -17,6 +17,7 @@ namespace GUI.UC
         public UCHoaDonBanHang()
         {
             InitializeComponent();
+            HienThiCacNamTreeView(); 
         }
         private void HienThiCacNamTreeView()
         {
@@ -65,7 +66,7 @@ namespace GUI.UC
 
 
 
-            private void labelX3_Click(object sender, EventArgs e)
+        private void labelX3_Click(object sender, EventArgs e)
         {
 
         }

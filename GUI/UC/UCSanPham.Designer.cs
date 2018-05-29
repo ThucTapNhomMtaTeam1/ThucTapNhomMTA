@@ -46,6 +46,7 @@
             this.panelDockContainer2 = new DevComponents.DotNetBar.PanelDockContainer();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
+            this.bntBaoCao = new DevComponents.DotNetBar.ButtonX();
             this.cbLoaiHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cbNhaPhanPhoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cbKhoHang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -239,6 +240,7 @@
             this.panelEx2.AutoScrollMargin = new System.Drawing.Size(100, 100);
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx2.Controls.Add(this.bntBaoCao);
             this.panelEx2.Controls.Add(this.cbLoaiHang);
             this.panelEx2.Controls.Add(this.cbNhaPhanPhoi);
             this.panelEx2.Controls.Add(this.cbKhoHang);
@@ -278,6 +280,22 @@
             this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx2.Style.GradientAngle = 90;
             this.panelEx2.TabIndex = 3;
+            // 
+            // bntBaoCao
+            // 
+            this.bntBaoCao.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bntBaoCao.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bntBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntBaoCao.Image = global::GUI.Properties.Resources.catalog_icon;
+            this.bntBaoCao.ImageFixedSize = new System.Drawing.Size(22, 22);
+            this.bntBaoCao.Location = new System.Drawing.Point(5, 6);
+            this.bntBaoCao.Name = "bntBaoCao";
+            this.bntBaoCao.Size = new System.Drawing.Size(194, 30);
+            this.bntBaoCao.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bntBaoCao.TabIndex = 19;
+            this.bntBaoCao.Text = "In Bản Thống Kê";
+            this.bntBaoCao.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.bntBaoCao.Click += new System.EventHandler(this.bntBaoCao_Click);
             // 
             // cbLoaiHang
             // 
@@ -887,7 +905,6 @@
             this.gvDanhSachSanPham.AllowUserToDeleteRows = false;
             this.gvDanhSachSanPham.AllowUserToResizeRows = false;
             this.gvDanhSachSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvDanhSachSanPham.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1079,5 +1096,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.AdvPropertyGrid advPropertyGrid1;
+        private DevComponents.DotNetBar.ButtonX bntBaoCao;
     }
 }

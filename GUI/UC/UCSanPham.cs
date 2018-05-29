@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
-using BLL; 
+using BLL;
+using GUI.FormBaoCao.FormSanPham;
 
 namespace GUI.UC
 {
@@ -442,6 +443,12 @@ namespace GUI.UC
             {
                 MessageBox.Show("Ban cần nhập Lựa Chọn Trước Khi Tìm Kiếm");
             }
+        }
+
+        private void bntBaoCao_Click(object sender, EventArgs e)
+        {
+            FormBaoCaoSanPham frm = new FormBaoCaoSanPham();
+            frm.Show();
         }
     }
 }

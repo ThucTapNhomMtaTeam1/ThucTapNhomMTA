@@ -31,10 +31,10 @@
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.texUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TexPass = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.texUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btnThoát = new DevComponents.DotNetBar.ButtonX();
             this.btbDangNhap = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
@@ -115,31 +115,18 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 0;
             // 
-            // labelX1
+            // TexPass
             // 
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(21, 16);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "User Name : ";
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(21, 56);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(84, 23);
-            this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "PassWourd :";
+            this.TexPass.Border.Class = "TextBoxBorder";
+            this.TexPass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TexPass.Location = new System.Drawing.Point(111, 56);
+            this.TexPass.Name = "TexPass";
+            this.TexPass.PasswordChar = '*';
+            this.TexPass.Size = new System.Drawing.Size(193, 22);
+            this.TexPass.TabIndex = 2;
             // 
             // texUserName
             // 
@@ -153,18 +140,31 @@
             this.texUserName.Size = new System.Drawing.Size(193, 22);
             this.texUserName.TabIndex = 1;
             // 
-            // TexPass
+            // labelX2
             // 
             // 
             // 
             // 
-            this.TexPass.Border.Class = "TextBoxBorder";
-            this.TexPass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TexPass.Location = new System.Drawing.Point(111, 56);
-            this.TexPass.Name = "TexPass";
-            this.TexPass.PasswordChar = '*';
-            this.TexPass.Size = new System.Drawing.Size(193, 22);
-            this.TexPass.TabIndex = 2;
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.Location = new System.Drawing.Point(21, 56);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(84, 23);
+            this.labelX2.TabIndex = 0;
+            this.labelX2.Text = "PassWord :";
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.Location = new System.Drawing.Point(21, 16);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(84, 23);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "User Name : ";
             // 
             // btnThoát
             // 

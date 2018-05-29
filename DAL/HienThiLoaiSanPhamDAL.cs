@@ -140,7 +140,7 @@ namespace DAL
             OpenDataBase();
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.CommandType = CommandType.StoredProcedure;
-            sqlCommand.CommandText = "ThemMoiLoaiSanPham";
+            sqlCommand.CommandText = "SuaThongTinLoaiSanPham";
             sqlCommand.Connection = sqlConnection;
             sqlCommand.Parameters.Add("@MaLoaiSanPham", SqlDbType.Char).Value = loaiSanPham.MaLoaiSanPham;
             sqlCommand.Parameters.Add("@TenLoaiSanPham", SqlDbType.NVarChar).Value = loaiSanPham.TenLoaiSanPham;

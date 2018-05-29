@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
-using BLL; 
+using BLL;
+using GUI.FormBaoCao.FormSanPham;
+using GUI.FormBaoCao.FormLoaiSanPham;
 
 namespace GUI.UC
 {
@@ -54,10 +56,22 @@ namespace GUI.UC
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
-            textMaLoaiSanPham.Text ="";
-            texTenLoaiSanPham.Text ="";
-            texDonViTinh.Text ="";
-            textBGhiChu.Text ="";
+           
+            //textMaLoaiSanPham.SelectedText ="";
+            //texTenLoaiSanPham.Text ="";
+            //texDonViTinh.Text ="";
+            //textBGhiChu.Text ="";
+
+            LoaiSanPham loaiSanPham = new LoaiSanPham()
+            {
+                MaLoaiSanPham = textMaLoaiSanPham.Text,
+                TenLoaiSanPham = texTenLoaiSanPham.Text,
+                DonViTinh = texDonViTinh.Text,
+                GhiChu = textBGhiChu.Text
+            };
+            HienThiLoaiSanPhamBLL hienThiLoaiSanPhamBLL = new HienThiLoaiSanPhamBLL();
+            hienThiLoaiSanPhamBLL.ThemMoiLoaiSanPham(loaiSanPham);
+            HienThiDanhSachLoaiSP();
         }
 
         private void btnDanhSach_Click(object sender, EventArgs e)
@@ -163,6 +177,17 @@ namespace GUI.UC
         private void gvLoaiSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void groupPanel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntBaoCao_Click(object sender, EventArgs e)
+        {
+            FormBaoCaoLoaiSanPham frm = new FormBaoCaoLoaiSanPham();
+            frm.Show();
         }
     }
 }

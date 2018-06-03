@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
-using BLL; 
+using BLL;
+using GUI.FormBaoCao.FormNhanVien;
 
 namespace GUI.UC
 {
@@ -392,6 +393,12 @@ namespace GUI.UC
                 }
 
             }
+        }
+
+        private void bntBaoCao_Click(object sender, EventArgs e)
+        {
+            FormBaoCaoNhanVien frm = new FormBaoCaoNhanVien();
+            frm.Show();
         }
     }
 }

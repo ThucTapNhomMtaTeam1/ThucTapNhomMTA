@@ -127,6 +127,7 @@
             this.NgayVaoLam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.bntBaoCao = new DevComponents.DotNetBar.ButtonX();
             this.dockSite12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar2)).BeginInit();
             this.bar2.SuspendLayout();
@@ -221,6 +222,7 @@
             // 
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx2.Controls.Add(this.bntBaoCao);
             this.panelEx2.Controls.Add(this.dateNgayVaoLam);
             this.panelEx2.Controls.Add(this.dateNgaySinh);
             this.panelEx2.Controls.Add(this.cbGioiTinh);
@@ -1274,6 +1276,22 @@
             this.KhoHang.HeaderText = "Kho Hàng ";
             this.KhoHang.Name = "KhoHang";
             // 
+            // bntBaoCao
+            // 
+            this.bntBaoCao.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bntBaoCao.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bntBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntBaoCao.Image = global::GUI.Properties.Resources.catalog_icon;
+            this.bntBaoCao.ImageFixedSize = new System.Drawing.Size(22, 22);
+            this.bntBaoCao.Location = new System.Drawing.Point(64, 142);
+            this.bntBaoCao.Name = "bntBaoCao";
+            this.bntBaoCao.Size = new System.Drawing.Size(155, 30);
+            this.bntBaoCao.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bntBaoCao.TabIndex = 21;
+            this.bntBaoCao.Text = "In Bản Thống Kê";
+            this.bntBaoCao.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.bntBaoCao.Click += new System.EventHandler(this.bntBaoCao_Click);
+            // 
             // UCNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1401,5 +1419,6 @@
         private System.Windows.Forms.RadioButton radioMa;
         private DevComponents.DotNetBar.Controls.TextBoxX texTimKiem;
         private System.Windows.Forms.Label label13;
+        private DevComponents.DotNetBar.ButtonX bntBaoCao;
     }
 }

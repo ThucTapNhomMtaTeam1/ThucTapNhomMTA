@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dotNetBarLoaiSanPham = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -43,17 +43,11 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.texDonViTinh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.btnXoa = new DevComponents.DotNetBar.ButtonX();
-            this.btnChinhSua = new DevComponents.DotNetBar.ButtonX();
-            this.btbLuu = new DevComponents.DotNetBar.ButtonX();
-            this.btnThemMoi = new DevComponents.DotNetBar.ButtonX();
             this.texTenLoaiSanPham = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textMaLoaiSanPham = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btnDanhSach = new DevComponents.DotNetBar.ButtonX();
-            this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.radioTen = new System.Windows.Forms.RadioButton();
             this.radioMa = new System.Windows.Forms.RadioButton();
             this.texTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -72,6 +66,13 @@
             this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dockContainerItem2 = new DevComponents.DotNetBar.DockContainerItem();
+            this.btnXoa = new DevComponents.DotNetBar.ButtonX();
+            this.btnChinhSua = new DevComponents.DotNetBar.ButtonX();
+            this.btbLuu = new DevComponents.DotNetBar.ButtonX();
+            this.btnThemMoi = new DevComponents.DotNetBar.ButtonX();
+            this.btnDanhSach = new DevComponents.DotNetBar.ButtonX();
+            this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
+            this.bntBaoCao = new DevComponents.DotNetBar.ButtonX();
             this.dockSite1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.bar1.SuspendLayout();
@@ -190,6 +191,7 @@
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.bntBaoCao);
             this.groupPanel2.Controls.Add(this.textBGhiChu);
             this.groupPanel2.Controls.Add(this.labelX4);
             this.groupPanel2.Controls.Add(this.texDonViTinh);
@@ -236,6 +238,7 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 0;
             this.groupPanel2.Text = "Thông Tin Loại Sản Phẩm";
+            this.groupPanel2.Click += new System.EventHandler(this.groupPanel2_Click);
             // 
             // textBGhiChu
             // 
@@ -245,7 +248,7 @@
             this.textBGhiChu.Border.Class = "TextBoxBorder";
             this.textBGhiChu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBGhiChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBGhiChu.Location = new System.Drawing.Point(112, 155);
+            this.textBGhiChu.Location = new System.Drawing.Point(112, 132);
             this.textBGhiChu.Name = "textBGhiChu";
             this.textBGhiChu.Size = new System.Drawing.Size(206, 22);
             this.textBGhiChu.TabIndex = 17;
@@ -257,7 +260,7 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(31, 155);
+            this.labelX4.Location = new System.Drawing.Point(31, 132);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(75, 23);
             this.labelX4.TabIndex = 16;
@@ -271,7 +274,7 @@
             this.texDonViTinh.Border.Class = "TextBoxBorder";
             this.texDonViTinh.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.texDonViTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texDonViTinh.Location = new System.Drawing.Point(112, 113);
+            this.texDonViTinh.Location = new System.Drawing.Point(112, 90);
             this.texDonViTinh.Name = "texDonViTinh";
             this.texDonViTinh.Size = new System.Drawing.Size(206, 22);
             this.texDonViTinh.TabIndex = 17;
@@ -283,75 +286,11 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(31, 113);
+            this.labelX3.Location = new System.Drawing.Point(31, 90);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(75, 23);
             this.labelX3.TabIndex = 16;
             this.labelX3.Text = "Đơn Vị Tính";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::GUI.Properties.Resources.Actions_window_close_icon1;
-            this.btnXoa.ImageFixedSize = new System.Drawing.Size(22, 22);
-            this.btnXoa.Location = new System.Drawing.Point(214, 258);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(104, 30);
-            this.btnXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnXoa.TabIndex = 12;
-            this.btnXoa.Text = "Xóa ";
-            this.btnXoa.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnChinhSua
-            // 
-            this.btnChinhSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnChinhSua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnChinhSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhSua.Image = global::GUI.Properties.Resources.bút;
-            this.btnChinhSua.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnChinhSua.Location = new System.Drawing.Point(31, 258);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(111, 30);
-            this.btnChinhSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnChinhSua.TabIndex = 13;
-            this.btnChinhSua.Text = "Chỉnh Sửa";
-            this.btnChinhSua.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
-            // 
-            // btbLuu
-            // 
-            this.btbLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btbLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btbLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbLuu.Image = global::GUI.Properties.Resources.save_as;
-            this.btbLuu.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btbLuu.Location = new System.Drawing.Point(214, 206);
-            this.btbLuu.Name = "btbLuu";
-            this.btbLuu.Size = new System.Drawing.Size(104, 30);
-            this.btbLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btbLuu.TabIndex = 14;
-            this.btbLuu.Text = "Lưu ";
-            this.btbLuu.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.btbLuu.Click += new System.EventHandler(this.btbLuu_Click);
-            // 
-            // btnThemMoi
-            // 
-            this.btnThemMoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThemMoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThemMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMoi.Image = global::GUI.Properties.Resources.Add;
-            this.btnThemMoi.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnThemMoi.Location = new System.Drawing.Point(31, 206);
-            this.btnThemMoi.Name = "btnThemMoi";
-            this.btnThemMoi.Size = new System.Drawing.Size(104, 30);
-            this.btnThemMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThemMoi.TabIndex = 15;
-            this.btnThemMoi.Text = "Thêm Mới";
-            this.btnThemMoi.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // texTenLoaiSanPham
             // 
@@ -361,7 +300,7 @@
             this.texTenLoaiSanPham.Border.Class = "TextBoxBorder";
             this.texTenLoaiSanPham.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.texTenLoaiSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texTenLoaiSanPham.Location = new System.Drawing.Point(112, 74);
+            this.texTenLoaiSanPham.Location = new System.Drawing.Point(112, 51);
             this.texTenLoaiSanPham.Name = "texTenLoaiSanPham";
             this.texTenLoaiSanPham.Size = new System.Drawing.Size(206, 22);
             this.texTenLoaiSanPham.TabIndex = 2;
@@ -374,7 +313,7 @@
             this.textMaLoaiSanPham.Border.Class = "TextBoxBorder";
             this.textMaLoaiSanPham.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textMaLoaiSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMaLoaiSanPham.Location = new System.Drawing.Point(112, 29);
+            this.textMaLoaiSanPham.Location = new System.Drawing.Point(112, 6);
             this.textMaLoaiSanPham.Name = "textMaLoaiSanPham";
             this.textMaLoaiSanPham.Size = new System.Drawing.Size(206, 22);
             this.textMaLoaiSanPham.TabIndex = 2;
@@ -386,7 +325,7 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(31, 71);
+            this.labelX2.Location = new System.Drawing.Point(31, 48);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 1;
@@ -399,7 +338,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(31, 26);
+            this.labelX1.Location = new System.Drawing.Point(31, 3);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 0;
@@ -451,38 +390,6 @@
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 0;
             this.groupPanel3.Text = "Tìm Kiếm Loại Sản Phẩm";
-            // 
-            // btnDanhSach
-            // 
-            this.btnDanhSach.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhSach.Image = global::GUI.Properties.Resources.catalog_icon;
-            this.btnDanhSach.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnDanhSach.Location = new System.Drawing.Point(191, 145);
-            this.btnDanhSach.Name = "btnDanhSach";
-            this.btnDanhSach.Size = new System.Drawing.Size(127, 30);
-            this.btnDanhSach.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDanhSach.TabIndex = 13;
-            this.btnDanhSach.Text = " Danh Sách";
-            this.btnDanhSach.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.btnDanhSach.Click += new System.EventHandler(this.btnDanhSach_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Image = global::GUI.Properties.Resources.TimKiem;
-            this.btnTimKiem.ImageFixedSize = new System.Drawing.Size(25, 25);
-            this.btnTimKiem.Location = new System.Drawing.Point(31, 145);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(119, 30);
-            this.btnTimKiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnTimKiem.TabIndex = 10;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // radioTen
             // 
@@ -616,42 +523,41 @@
             this.gvLoaiSanPham.AllowUserToDeleteRows = false;
             this.gvLoaiSanPham.AllowUserToResizeRows = false;
             this.gvLoaiSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvLoaiSanPham.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvLoaiSanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvLoaiSanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvLoaiSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvLoaiSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLoaiSanPham,
             this.tenLoaiSanPham,
             this.DonViTinh,
             this.GhiChu});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvLoaiSanPham.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvLoaiSanPham.DefaultCellStyle = dataGridViewCellStyle5;
             this.gvLoaiSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvLoaiSanPham.EnableHeadersVisualStyles = false;
             this.gvLoaiSanPham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.gvLoaiSanPham.Location = new System.Drawing.Point(340, 0);
             this.gvLoaiSanPham.Name = "gvLoaiSanPham";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvLoaiSanPham.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvLoaiSanPham.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gvLoaiSanPham.RowHeadersVisible = false;
             this.gvLoaiSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvLoaiSanPham.Size = new System.Drawing.Size(1501, 967);
@@ -683,6 +589,118 @@
             // 
             this.dockContainerItem2.Name = "dockContainerItem2";
             this.dockContainerItem2.Text = "dockContainerItem2";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::GUI.Properties.Resources.Actions_window_close_icon1;
+            this.btnXoa.ImageFixedSize = new System.Drawing.Size(22, 22);
+            this.btnXoa.Location = new System.Drawing.Point(214, 207);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(104, 30);
+            this.btnXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXoa.TabIndex = 12;
+            this.btnXoa.Text = "Xóa ";
+            this.btnXoa.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnChinhSua
+            // 
+            this.btnChinhSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnChinhSua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnChinhSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSua.Image = global::GUI.Properties.Resources.bút;
+            this.btnChinhSua.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnChinhSua.Location = new System.Drawing.Point(31, 207);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(111, 30);
+            this.btnChinhSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnChinhSua.TabIndex = 13;
+            this.btnChinhSua.Text = "Chỉnh Sửa";
+            this.btnChinhSua.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
+            // 
+            // btbLuu
+            // 
+            this.btbLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btbLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btbLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbLuu.Image = global::GUI.Properties.Resources.save_as;
+            this.btbLuu.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btbLuu.Location = new System.Drawing.Point(214, 161);
+            this.btbLuu.Name = "btbLuu";
+            this.btbLuu.Size = new System.Drawing.Size(104, 30);
+            this.btbLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btbLuu.TabIndex = 14;
+            this.btbLuu.Text = "Lưu ";
+            this.btbLuu.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.btbLuu.Click += new System.EventHandler(this.btbLuu_Click);
+            // 
+            // btnThemMoi
+            // 
+            this.btnThemMoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemMoi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThemMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMoi.Image = global::GUI.Properties.Resources.Add;
+            this.btnThemMoi.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnThemMoi.Location = new System.Drawing.Point(31, 161);
+            this.btnThemMoi.Name = "btnThemMoi";
+            this.btnThemMoi.Size = new System.Drawing.Size(104, 30);
+            this.btnThemMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThemMoi.TabIndex = 15;
+            this.btnThemMoi.Text = "Thêm Mới";
+            this.btnThemMoi.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
+            // 
+            // btnDanhSach
+            // 
+            this.btnDanhSach.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDanhSach.Image = global::GUI.Properties.Resources.catalog_icon;
+            this.btnDanhSach.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnDanhSach.Location = new System.Drawing.Point(191, 145);
+            this.btnDanhSach.Name = "btnDanhSach";
+            this.btnDanhSach.Size = new System.Drawing.Size(127, 30);
+            this.btnDanhSach.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDanhSach.TabIndex = 13;
+            this.btnDanhSach.Text = " Danh Sách";
+            this.btnDanhSach.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.btnDanhSach.Click += new System.EventHandler(this.btnDanhSach_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.TimKiem;
+            this.btnTimKiem.ImageFixedSize = new System.Drawing.Size(25, 25);
+            this.btnTimKiem.Location = new System.Drawing.Point(31, 145);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(119, 30);
+            this.btnTimKiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTimKiem.TabIndex = 10;
+            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // bntBaoCao
+            // 
+            this.bntBaoCao.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bntBaoCao.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bntBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntBaoCao.Image = global::GUI.Properties.Resources.catalog_icon;
+            this.bntBaoCao.ImageFixedSize = new System.Drawing.Size(22, 22);
+            this.bntBaoCao.Location = new System.Drawing.Point(124, 252);
+            this.bntBaoCao.Name = "bntBaoCao";
+            this.bntBaoCao.Size = new System.Drawing.Size(194, 30);
+            this.bntBaoCao.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bntBaoCao.TabIndex = 20;
+            this.bntBaoCao.Text = "In Bản Thống Kê";
+            this.bntBaoCao.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+            this.bntBaoCao.Click += new System.EventHandler(this.bntBaoCao_Click);
             // 
             // UCLoaiSanPham
             // 
@@ -758,5 +776,6 @@
         private DevComponents.DotNetBar.DockSite dockSite11;
         private DevComponents.DotNetBar.DockContainerItem dockContainerItem2;
         private DevComponents.DotNetBar.ButtonX btnDanhSach;
+        private DevComponents.DotNetBar.ButtonX bntBaoCao;
     }
 }

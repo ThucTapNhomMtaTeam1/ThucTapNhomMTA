@@ -61,54 +61,5 @@ namespace GUI.UC
 
             }
         }
-    
-
-
-
-
-        private void labelX3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelX15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelX21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelX2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelEx3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSuaSP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLLuuSP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbKhoHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThemMoi_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

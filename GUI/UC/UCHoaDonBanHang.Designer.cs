@@ -1053,6 +1053,7 @@
             this.tvPhanLoaiHoaDon.SelectedImageIndex = 4;
             this.tvPhanLoaiHoaDon.Size = new System.Drawing.Size(295, 332);
             this.tvPhanLoaiHoaDon.TabIndex = 5;
+           
             // 
             // imageList1
             // 
@@ -1099,7 +1100,7 @@
             this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx3.Style.GradientAngle = 90;
             this.panelEx3.TabIndex = 0;
-            this.panelEx3.Click += new System.EventHandler(this.panelEx3_Click);
+
             // 
             // labelX3
             // 
@@ -1112,7 +1113,7 @@
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(171, 23);
             this.labelX3.TabIndex = 1;
-            this.labelX3.Click += new System.EventHandler(this.labelX2_Click);
+
             // 
             // labelX2
             // 
@@ -1125,7 +1126,7 @@
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(171, 23);
             this.labelX2.TabIndex = 1;
-            this.labelX2.Click += new System.EventHandler(this.labelX2_Click);
+
             // 
             // labelX1
             // 

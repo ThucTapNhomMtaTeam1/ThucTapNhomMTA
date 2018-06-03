@@ -11,7 +11,7 @@ namespace DAL
 {
     public class HienThiMatKhauDAL : AccessDataBase
     {
-        public bool KiemTraDangNhap(string TaiKhoan , string MatKhau)
+        public int KiemTraDangNhap(string TaiKhoan , string MatKhau)
         {
             try
             {
@@ -23,19 +23,24 @@ namespace DAL
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
                 while (sqlDataReader.Read())
                 {
-                    if(TaiKhoan == sqlDataReader[0].ToString()
-                        && MatKhau == sqlDataReader[1].ToString())
+                    if(TaiKhoan == sqlDataReader[0].ToString())
                     {
-                        return true; 
-                    }
-                    
+                        if(MatKhau == sqlDataReader[1].ToString())
+                        {
+                            return  1; 
+                        }
+                        else if(MatKhau != sqlDataReader[1].ToString())
+                        {
+                            return 0;
+                        }
+                    } 
                 }
                 CloseDataBase();
-                return false;
+                return -1;
             }
-            catch (Exception ex)
+            catch 
             {
-                throw ex;
+                return -2; 
             }
         }
 

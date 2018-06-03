@@ -11,7 +11,7 @@ namespace BLL
     public class HienThiMatKhauBLL
     {
         HienThiMatKhauDAL HienThiMatKhauDAL = new HienThiMatKhauDAL(); 
-        public bool KiemTraDangNhap(string TaiKhoan, string MatKhau)
+        public int KiemTraDangNhap(string TaiKhoan, string MatKhau)
         {
             return HienThiMatKhauDAL.KiemTraDangNhap(TaiKhoan, MatKhau); 
         }

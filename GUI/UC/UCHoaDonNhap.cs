@@ -19,7 +19,6 @@ namespace GUI.UC
             InitializeComponent();
             HienThiCacNamTreeView();
             HienThiPhieuNhapBLL hienThiPhieuNhapBLL = new HienThiPhieuNhapBLL();
-            //HienThiDanhSachDonHang(hienThiPhieuNhapBLL.HienThiToanBoDanhSachPhieuNhap()); 
         }
         private void HienThiCacNamTreeView()
         {
@@ -75,25 +74,6 @@ namespace GUI.UC
                 cbKhoHang.Items.Add(khoHang); 
             }
             HienThiNhaSanXuatBLL hienThiNhaSanXuatBLL = new HienThiNhaSanXuatBLL();
-            
-            //    HienThiNhanVienBLL hienThiNhanVienBLL = new HienThiNhanVienBLL(); 
-
-            //    foreach(NhanVien nhanvien in hienThiNhanVienBLL.LayToanBoNhanVien())
-            //    {
-            //        TreeNode treeNode = new TreeNode(nhanvien.TenNhanVien);
-            //        tvPhanLoaiHoaDon.Nodes[1].Nodes.Add(treeNode);
-            //        treeNode.Tag = nhanvien;
-            //    }
-
-
-            //    HienThiKhoHangBLL hienThiKhoHangBLL = new HienThiKhoHangBLL();
-            //    foreach (KhoHang khoHang in hienThiKhoHangBLL.LayToanBoKhoHang())
-            //    {
-            //        TreeNode treeNode = new TreeNode(khoHang.TenKhoHang);
-            //        tvPhanLoaiHoaDon.Nodes[2].Nodes.Add(treeNode);
-            //        treeNode.Tag = khoHang;
-            //    }
-
         }
 
         public void HienThiDanhSachDonHang(List<PhieuNhap>DanhSach)
@@ -106,6 +86,7 @@ namespace GUI.UC
                 dataGridViewRow.Cells[0].Value = item.MaPhieuNhap;
                 dataGridViewRow.Cells[1].Value = item.NhanVien;
                 dataGridViewRow.Cells[2].Value = item.NhaCungCap;
+                dataGridViewRow.Cells[3].Value = item.KhoHang;
                 gvHoaDon.Rows.Add(dataGridViewRow);
                 dataGridViewRow.Tag = item; 
             }
@@ -138,7 +119,7 @@ namespace GUI.UC
             {
                 DataGridViewRow dataGridViewRow = new DataGridViewRow();
                 dataGridViewRow.CreateCells(gvSanPhamTheoHoaDon);
-                dataGridViewRow.Cells[0].Value = item.SanPham;
+                dataGridViewRow.Cells[0].Value = item.TenSanPham;
                 dataGridViewRow.Cells[1].Value = item.SoLuong;
                 dataGridViewRow.Cells[2].Value = item.DonGia;
                 dataGridViewRow.Cells[3].Value = item.TongTien;
@@ -146,6 +127,7 @@ namespace GUI.UC
             }
 
         }
+        List<CT_PhieuNhap> DanhSachSanPhamTheoHoaDơn = new List<CT_PhieuNhap>();
         HienThiCT_PhieuNhapBLL HienThiCT_PhieuNhapBLL = new HienThiCT_PhieuNhapBLL(); 
         private void gvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -162,23 +144,96 @@ namespace GUI.UC
                         cbNhaCungCap.SelectedItem = nhacungcap; 
                     }
                 }
-                DateNgayNhap.Value = DateTime; 
+                foreach(KhoHang khoHang in cbKhoHang.Items)
+                {
+                    if(khoHang.TenKhoHang == dataGridViewRow.Cells[3].Value + "")
+                    {
+                        cbKhoHang.SelectedItem = khoHang;
+                    }
+                }
+
+                DateNgayNhap.Value = DateTime;
+                DanhSachSanPhamTheoHoaDơn = HienThiCT_PhieuNhapBLL.HienThiDanhSachSPTheoMaPhieu(texMaHoaDon.Text);
             }
         }
 
-        private void btbLuu_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        
         private void btnLLuuSP_Click(object sender, EventArgs e)
         {
-
+            
+            CT_PhieuNhap cT_PhieuNhap = new CT_PhieuNhap()
+            {
+                MaPhieuNhap = texMaHoaDon.Text,
+                SanPham = texMaSP.Text,
+                TenSanPham = texTenSP.Text,
+                SoLuong = int.Parse(texSoLuong.Text),
+                GhiChu = " ",
+                DonGia = double.Parse(texDonGiaNhap.Text),
+                TongTien = double.Parse(texSoLuong.Text) * double.Parse(texDonGiaNhap.Text)
+            };
+            int k = 0;
+            if (DanhSachSanPhamTheoHoaDơn.Count != 0)
+            {
+                foreach (CT_PhieuNhap sp in DanhSachSanPhamTheoHoaDơn)
+                {
+                    if (cT_PhieuNhap.SanPham == sp.SanPham && cT_PhieuNhap.MaPhieuNhap == sp.MaPhieuNhap)
+                    {
+                        sp.SoLuong += cT_PhieuNhap.SoLuong;
+                        break;
+                    }
+                    k++;
+                    if (k == DanhSachSanPhamTheoHoaDơn.Count && sp.SanPham != cT_PhieuNhap.SanPham && cT_PhieuNhap.MaPhieuNhap == sp.MaPhieuNhap)
+                    {
+                        DanhSachSanPhamTheoHoaDơn.Add(cT_PhieuNhap);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                DanhSachSanPhamTheoHoaDơn.Add(cT_PhieuNhap);
+            }
+            HienThiDanhSachSanPhamHD(DanhSachSanPhamTheoHoaDơn); 
         }
 
-        private void btnSuaSP_Click(object sender, EventArgs e)
+        private void CapNhapLaiKhoHang()
         {
+            KhoHang khoHang = cbKhoHang.SelectedItem as KhoHang;
+            List<SanPham> DanhSach = new List<SanPham>();
+            NhaCungCap nhacungcap = cbNhaCungCap.SelectedItem as NhaCungCap; 
+            foreach(CT_PhieuNhap ct in DanhSachSanPhamTheoHoaDơn)
+            {
+                MessageBox.Show(ct.SanPham);
+                SanPham sanPham = new SanPham()
+                {
+                    MaSanPham = ct.SanPham,
+                    TenSanPham = ct.TenSanPham,
+                    SoLuong = ct.SoLuong,
+                    KhoHang = khoHang.MaKhoHang,
+                    LoaiSanPham = "LSP0000",
+                    NhaCungCap = nhacungcap.MaNhaCungCap,
+                    DonGia = 0,
+                    NhaSanXuat = "NSX0000"
 
+                };
+                DanhSach.Add(sanPham);
+            }
+
+            HienThiSanPhamBLL hienThiSanPhamBLL = new HienThiSanPhamBLL();
+            foreach (SanPham sp1 in DanhSach)
+            {
+                List<SanPham> ketQua = hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoMaSP(sp1.MaSanPham);
+                if (ketQua.Count == 0)
+                {
+                    hienThiSanPhamBLL.ThemMoiSanPham(sp1);
+                }
+                else
+                {
+                    int SoLuongSP = ketQua[0].SoLuong + sp1.SoLuong;
+                    hienThiSanPhamBLL.ChinhSuaSoLuongSanPham(sp1.MaSanPham, SoLuongSP);
+                }
+            }
         }
 
         private void cbKhoHang_SelectedIndexChanged(object sender, EventArgs e)
@@ -193,25 +248,6 @@ namespace GUI.UC
             
         }
 
-       
-
-
-        private void cbNhaSanXuat_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //KhoHang khoHang = cbKhoHang.SelectedItem as KhoHang;
-            //HienThiSanPhamBLL HienThiSanPhamBLL = new HienThiSanPhamBLL();
-            //NhaSanXuat nhaSanXuat = cbNhaSanXuat.SelectedItem as NhaSanXuat;
-            //cbSanPham.Items.Clear();
-            //foreach (SanPham SanPham in HienThiSanPhamBLL.HienThiDanhSachSanPhamTheoKho(khoHang.MaKhoHang))
-            //{
-               
-            //    if (SanPham.NhaSanXuat == nhaSanXuat.TenNhaSanXuat)
-            //    {
-                    
-            //        cbSanPham.Items.Add(SanPham); 
-            //    }
-            //}
-        }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
@@ -290,15 +326,6 @@ namespace GUI.UC
 
         }
 
-        private void btnThemMoiSP_Click(object sender, EventArgs e)
-        {
-            texMaSanPham.Text = "";
-            texTenSanPham.Text = "";
-            texSoLuong.Text = "";
-            texDonGiaNhap.Text = "";
-            texTongTien.Text = ""; 
-        }
-
         private void btnXoaSP_Click(object sender, EventArgs e)
         {
             if(texMaSP.Text== null)
@@ -334,10 +361,6 @@ namespace GUI.UC
                 DataGridViewRow dataGridViewRow = gvSanPhamTheoHoaDon.Rows[e.RowIndex];
                 foreach(SanPham sanPham in hienThiSanPhamBLL.HienThiDanhSachSanPham())
                 {
-                    MessageBox.Show(sanPham.MaSanPham); 
-                    MessageBox.Show(dataGridViewRow.Cells[0].Value + "");
-                    MessageBox.Show(sanPham.TenSanPham);
-
                     if (sanPham.TenSanPham == dataGridViewRow.Cells[0].Value + "")
                     {
                         texMaSP.Text = sanPham.MaSanPham;
@@ -350,6 +373,57 @@ namespace GUI.UC
                 texTongTien.Text = dataGridViewRow.Cells[3].Value + "";
                 
             }
+        }
+
+        private void btnCapNhapKho_Click(object sender, EventArgs e)
+        {
+            CapNhapLaiKhoHang();
+            HienThiCT_PhieuNhapBLL.XoaToanBoChiTietPhieuNhap(texMaHoaDon.Text); 
+            foreach (CT_PhieuNhap ct in DanhSachSanPhamTheoHoaDơn)
+            {
+                HienThiCT_PhieuNhapBLL.ThemMoiCT_PhieuNhap(ct); 
+            }
+            
+            DanhSachSanPhamTheoHoaDơn = HienThiCT_PhieuNhapBLL.HienThiDanhSachSPTheoMaPhieu(texMaHoaDon.Text);
+        }
+
+        private void btnSuaSP_Click(object sender, EventArgs e)
+        {
+            if(texMaHoaDon.Text == null || texMaHoaDon.Text == "")
+            {
+                MessageBox.Show("Bạn Cần Phải Nhập Hóa Đơn Để Thêm Sản Phâm");
+                return; 
+            }
+
+            if (texMaSP.Text == null || texMaSP.Text == "")
+            {
+                MessageBox.Show("Bạn Cần Chọn Sản Phẩm Đền Thêm Vào Hóa Đơn");
+                return;
+            }
+            CT_PhieuNhap cT_PhieuNhap = new CT_PhieuNhap()
+            {
+                MaPhieuNhap = texMaHoaDon.Text,
+                SanPham = texMaSP.Text,
+                TenSanPham = texTenSP.Text,
+                SoLuong = int.Parse(texSoLuong.Text),
+                GhiChu = " ",
+                DonGia = double.Parse(texDonGiaNhap.Text),
+                TongTien = double.Parse(texSoLuong.Text) * double.Parse(texDonGiaNhap.Text)
+            };
+            HienThiCT_PhieuNhapBLL.CapNhapThongTinCT_HoaDonNhap(cT_PhieuNhap); 
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (radioMaHD.Checked)
+            {
+                // tìm kiếm thông tin hóa đơn theo mã 
+            }
+            else if (radioNgay.Checked)
+            {
+                // tim kiếm thông tin hóa đơn theo ngày
+            }
+
         }
     }
 }

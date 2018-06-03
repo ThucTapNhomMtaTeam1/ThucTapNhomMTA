@@ -245,7 +245,14 @@ namespace GUI.UC
                 nhanVien.KhoHang = khoHang.MaKhoHang; 
             }
             HienThiNhanVienBLL hienThiNhanVienBLL = new HienThiNhanVienBLL();
-            hienThiNhanVienBLL.ThemMoiNhanVien(nhanVien);
+            Boolean KetQua =  hienThiNhanVienBLL.ThemMoiNhanVien(nhanVien);
+            if(KetQua == false)
+            {
+                MessageBox.Show("Mã Nhân Viên Đã Tồn Tại Trong Hệ Thống"); 
+            }
+
+
+
             if (KKhoHang != null)
             {
                 HienThiDanhSachNhanVienTheoKhoHang(KKhoHang);
@@ -271,7 +278,12 @@ namespace GUI.UC
             }
             else if (radioCMT.Checked)
             {
-                DanhSachNhanVien = hienThiNhanVienBLL.TimKiemSinhvienTheoCMT(texTimKiem.Text); 
+                DanhSachNhanVien = hienThiNhanVienBLL.TimKiemSinhvienTheoCMT(texTimKiem.Text);
+            }
+            else
+            {
+                MessageBox.Show("Bạn Cần Nhập Lựa Chọn Trước Khi Tìm Kiếm");
+                return; 
             }
             gvDanhSachNhanVien.Rows.Clear();
             int nam = 0, nu = 0, Tong = 0;
@@ -311,7 +323,7 @@ namespace GUI.UC
         {
             if (texMaNhanVien.Text == "" || texMaNhanVien.Text == null)
             {
-                MessageBox.Show("Bạn Cần Nhập Mật Khẩu Trước Khi Lưu");
+                MessageBox.Show("Bạn Phải Chọn Nhân Viên Cần Chỉnh Sửa");
                 return;
             }
             if (cbGioiTinh.Text == "" || cbGioiTinh.Text == null)
@@ -364,7 +376,7 @@ namespace GUI.UC
         {
             if (texMaNhanVien.Text == "" || texMaNhanVien == null)
             {
-                MessageBox.Show("Bạn Chưa Chọn Nhân Viên Cần Xóa");
+                MessageBox.Show("Bạn Phải Chọn Nhân Viên Cần Xóa");
             }
             else
             {

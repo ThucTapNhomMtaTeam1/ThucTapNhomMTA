@@ -53,6 +53,7 @@ namespace BLL
 
         public bool ThemMoiSanPham(SanPham sanPham)
         {
+            
             return hienThiSanPhamDAL.ThemMoiSanPham(sanPham);
         }
 
@@ -64,6 +65,11 @@ namespace BLL
         public bool XoaSanPham(string MaSanPham)
         {
             return hienThiSanPhamDAL.XoaSanPham(MaSanPham);
+        }
+
+        public void ChinhSuaSoLuongSanPham(string maSanPham, int soLuongSP)
+        {
+             hienThiSanPhamDAL.ChinhSuaSoLuongSanPham(maSanPham, soLuongSP);
         }
     }
 }

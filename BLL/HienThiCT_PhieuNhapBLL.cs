@@ -46,5 +46,30 @@ namespace BLL
             return hienThiCT_PhieuNhapDAL.SuaCt_PhieuNhap(cT_PhieuNhap);
         }
 
+        public void XoaToanBoChiTietPhieuNhap(string MaPhieuNhap)
+        {
+            hienThiCT_PhieuNhapDAL.XoaToanBoChiTietPhieuNhap(MaPhieuNhap); 
+        }
+
+        public void CapNhapThongTinCT_HoaDonNhap(CT_PhieuNhap cT_PhieuNhap)
+        {
+            if(cT_PhieuNhap.SoLuong == null)
+            {
+                cT_PhieuNhap.SoLuong = 0; 
+            }
+            if(cT_PhieuNhap.GhiChu == null)
+            {
+                cT_PhieuNhap.GhiChu = " "; 
+            }
+            if(cT_PhieuNhap.TongTien == null)
+            {
+                cT_PhieuNhap.TongTien = 0;
+            }
+            if (cT_PhieuNhap.DonGia == null)
+            {
+                cT_PhieuNhap.DonGia = 0;
+            }
+            hienThiCT_PhieuNhapDAL.CapNhapThongTinCT_HoaDonNhap(cT_PhieuNhap); 
+        }
     }
 }

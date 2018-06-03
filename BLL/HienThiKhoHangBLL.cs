@@ -15,6 +15,10 @@ namespace BLL
         {
             return HienThiKhoHangDAL.LayToanBoKhoHang(); 
         }
+        public KhoHang HienThiKhoHangTheoMaNhaVien(string MaNhanVien)
+        {
+            return HienThiKhoHangTheoMaNhaVien(MaNhanVien); 
+        }
 
         public bool ThemMoiKhoHang(KhoHang khoHang)
         {

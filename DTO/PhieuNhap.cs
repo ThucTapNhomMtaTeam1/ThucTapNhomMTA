@@ -44,5 +44,10 @@ namespace DTO
             get;
             set; 
         }
+        public string KhoHang
+        {
+            get;
+            set; 
+        }
     }
 }

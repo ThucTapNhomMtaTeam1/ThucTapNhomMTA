@@ -62,7 +62,7 @@ namespace BLL
             {
                 khachHang.NgaySinh = new DateTime(1,1,1);
             }
-           return  HienThiKhachHangDAL.ThemMoiKhachHang(khachHang); 
+            return  HienThiKhachHangDAL.ThemMoiKhachHang(khachHang); 
             
         }
 

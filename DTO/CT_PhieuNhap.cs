@@ -39,5 +39,12 @@ namespace DTO
             get;
             set; 
         }
+        public string TenSanPham
+        {
+            get;
+            set;
+        }
+            
+
     }
 }

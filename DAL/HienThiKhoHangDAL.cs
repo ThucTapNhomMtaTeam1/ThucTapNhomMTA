@@ -12,6 +12,35 @@ namespace DAL
 {
     public class HienThiKhoHangDAL: AccessDataBase
     {
+        public KhoHang HienThiKhoHangTheoMaNhaVien(string MaNhanVien)
+        {
+            //HienThiKhoHangTheoMaNhanVien
+            try
+            {
+                KhoHang khoHang = new KhoHang();
+                OpenDataBase();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.CommandText = "HienThiKhoHangTheoMaNhanVien";
+                sqlCommand.Parameters.Add("@MaNhanVien", SqlDbType.Char).Value = MaNhanVien;
+                sqlCommand.Connection = sqlConnection;
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    khoHang.MaKhoHang = sqlDataReader.GetString(0);
+                    khoHang.TenKhoHang = sqlDataReader.GetString(1);
+                    khoHang.DiaChi = sqlDataReader.GetString(2);
+                    khoHang.SoDienThoai = sqlDataReader.GetString(3);
+                }
+                sqlDataReader.Close();
+                return khoHang;
+            }
+            catch
+            {
+                return null; 
+            }
+
+        }
         public List<KhoHang> LayToanBoKhoHang()
         {
             try

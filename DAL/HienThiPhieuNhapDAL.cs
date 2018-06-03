@@ -31,7 +31,8 @@ namespace DAL
                         MaPhieuNhap = sqlDataReader[0].ToString(),
                         NhanVien = sqlDataReader[1].ToString(),
                         NhaCungCap = sqlDataReader[2].ToString(),
-                        NgayNhap = DateTime.Parse(sqlDataReader[3].ToString())
+                        NgayNhap = DateTime.Parse(sqlDataReader[3].ToString()),
+                        KhoHang = sqlDataReader[4].ToString()
                     });
                 }
                 sqlDataReader.Close();

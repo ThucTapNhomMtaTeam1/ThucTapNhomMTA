@@ -33,8 +33,8 @@ namespace GUI.FormDangNhap
             //TexPass.UseSystemPasswordChar = true; 
             taiKhoan.MatKhau = maHoa.ToMD5(TexPass.Text);
             HienThiMatKhauBLL hienThiMatKhauBLL = new HienThiMatKhauBLL();
-            bool KetQua = hienThiMatKhauBLL.KiemTraDangNhap(taiKhoan.TenTaiKhoan,taiKhoan.MatKhau); 
-            if(KetQua == true)
+            int KetQua = hienThiMatKhauBLL.KiemTraDangNhap(taiKhoan.TenTaiKhoan,taiKhoan.MatKhau); 
+            if(KetQua == 1)
             {
                 
                 frmQuanLyBanHang frmQuanLyBanHang = new frmQuanLyBanHang();
@@ -42,10 +42,20 @@ namespace GUI.FormDangNhap
                 frmQuanLyBanHang.Show();
                 this.Hide(); 
             }
-            else
+            else if(KetQua ==0)
             {
-                MessageBox.Show("Sai Thông Tin Đăng Nhập");
+                MessageBox.Show("Bạn Nhập Sai Mật Khâu");
                 
+            }
+            else if (KetQua == -1)
+            {
+                MessageBox.Show("Tài Khoản Không Tồn Tại");
+
+            }
+            else if (KetQua == -2)
+            {
+                MessageBox.Show("Lỗi Kết Nối SQL");
+
             }
             FrmDangNhap frmDangNhap = new FrmDangNhap();
             frmDangNhap.Close(); 

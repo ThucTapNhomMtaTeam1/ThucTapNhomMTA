@@ -87,6 +87,25 @@ namespace DAL
             
         }
 
+        public void ChinhSuaSoLuongSanPham(string maSanPham, int soLuongSP)
+        {
+            try
+            {
+                OpenDataBase();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.CommandText = "update SanPham set SoLuong = '" +soLuongSP+ "' where MaSanPham = '" +maSanPham+"'";
+                sqlCommand.Connection = sqlConnection;
+                int k = sqlCommand.ExecuteNonQuery();
+                CloseDataBase();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public List<SanPham> HienThiDanhSachSanPhamTheoLoaiSP(string MaLoaiSanPham)
         {
             try

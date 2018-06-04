@@ -14,12 +14,17 @@ namespace GUI.UC
 {
     public partial class UCHoaDonNhap : UserControl
     {
+        private DateTime DateTime = new DateTime();
+        List<CT_PhieuNhap> DanhSachSanPhamTheoHoaDơn = new List<CT_PhieuNhap>();
+        HienThiCT_PhieuNhapBLL HienThiCT_PhieuNhapBLL = new HienThiCT_PhieuNhapBLL();
+
         public UCHoaDonNhap()
         {
             InitializeComponent();
             HienThiCacNamTreeView();
             HienThiPhieuNhapBLL hienThiPhieuNhapBLL = new HienThiPhieuNhapBLL();
         }
+
         private void HienThiCacNamTreeView()
         {
             for (int i = 1; i < tvPhanLoaiHoaDon.Nodes.Count; i++)
@@ -93,7 +98,6 @@ namespace GUI.UC
                 
          }
 
-        private DateTime DateTime = new DateTime(); 
         private void tvPhanLoaiHoaDon_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node != null)
@@ -127,8 +131,7 @@ namespace GUI.UC
             }
 
         }
-        List<CT_PhieuNhap> DanhSachSanPhamTheoHoaDơn = new List<CT_PhieuNhap>();
-        HienThiCT_PhieuNhapBLL HienThiCT_PhieuNhapBLL = new HienThiCT_PhieuNhapBLL(); 
+
         private void gvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
@@ -157,8 +160,6 @@ namespace GUI.UC
             }
         }
 
-
-        
         private void btnLLuuSP_Click(object sender, EventArgs e)
         {
             
@@ -247,7 +248,6 @@ namespace GUI.UC
             }
             
         }
-
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
@@ -350,8 +350,6 @@ namespace GUI.UC
             HienThiDanhSachSanPhamHD(hienThiCT_PhieuNhapBLL.HienThiDanhSachSPTheoMaPhieu(texMaHoaDon.Text));
         }
 
-        
-
         private void gvSanPhamTheoHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -417,89 +415,42 @@ namespace GUI.UC
         {
             if (radioMaHD.Checked)
             {
-                // tìm kiếm thông tin hóa đơn theo mã 
+                HienThiPhieuNhapBLL hienThiPhieuNhapBLL = new HienThiPhieuNhapBLL();
+                List<PhieuNhap> DanhSach = hienThiPhieuNhapBLL.LayThongTinPhieuNhapTheoMa(texTimKiem.Text);
+                HienThiDanhSachDonHang(DanhSach); 
             }
             else if (radioNgay.Checked)
             {
-                // tim kiếm thông tin hóa đơn theo ngày
+                HienThiPhieuNhapBLL hienThiPhieuNhapBLL = new HienThiPhieuNhapBLL();
+                DateTime dateTime = ChuyenDoiThoiGian(texTimKiem.Text);
+                if(dateTime != new DateTime())
+                {
+                    List<PhieuNhap> DanhSach = hienThiPhieuNhapBLL.LayPhieuNhapTheoNgayThangNam(dateTime);
+                    HienThiDanhSachDonHang(DanhSach);
+                }
+                return; 
             }
+        }
 
+        private DateTime ChuyenDoiThoiGian(string Tex)
+        {
+            try
+            {
+                string[] Chuoi = Tex.Split('/');
+                int ngay = int.Parse(Chuoi[0]);
+                int thang = int.Parse(Chuoi[1]);
+                int nam = int.Parse(Chuoi[2]);
+                DateTime dateTime = new DateTime(nam, thang, ngay);
+                return dateTime;
+            }
+            catch
+            {
+                MessageBox.Show("Định Dạng Thời Gian Truyền Vào Là : (Ngày/Thang/Năn)!");
+                return new DateTime();  
+            }
+            
         }
     }
 }
-
-
-//private void tvPhanLoaiSanPham_AfterSelect(object sender, TreeViewEventArgs e)
-//{
-    
-
-//    List<SanPham> DanhSachSanPham = new List<SanPham>();
-//    if (e.Node.Level == 1)
-//    {
-//        if (tvPhanLoaiSanPham.Nodes[0].Nodes[0] == e.Node)
-//        {
-//            HienThiDanhSachSanPham();
-//        }
-//    }
-//    for (int i = 0; i < tvPhanLoaiSanPham.Nodes[1].Nodes.Count; i++)
-//    {
-//        if (e.Node.Level == 1)
-//        {
-//            if (tvPhanLoaiSanPham.Nodes[1].Nodes[i] == e.Node)
-//            {
-//                KhoHang khoHang = e.Node.Tag as KhoHang;
-//                DanhSachSanPham = hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoKho(khoHang.MaKhoHang);
-//                HienThiDanhSachSanPham(DanhSachSanPham);
-//                break;
-//            }
-//        }
-//    }
-
-//    for (int i = 0; i < tvPhanLoaiSanPham.Nodes[2].Nodes.Count; i++)
-//    {
-//        if (e.Node.Level == 1)
-//        {
-//            if (tvPhanLoaiSanPham.Nodes[2].Nodes[i] == e.Node)
-//            {
-//                LoaiSanPham loaiSanPham = e.Node.Tag as LoaiSanPham;
-//                DanhSachSanPham = hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoLoaiSP(loaiSanPham.MaLoaiSanPham);
-//                HienThiDanhSachSanPham(DanhSachSanPham);
-//                break;
-//            }
-
-//        }
-//    }
-
-//    for (int i = 0; i < tvPhanLoaiSanPham.Nodes[3].Nodes.Count; i++)
-//    {
-//        if (e.Node.Level == 1)
-//        {
-
-//            if (tvPhanLoaiSanPham.Nodes[3].Nodes[i] == e.Node)
-//            {
-//                NhaCungCap nhaCungCap = e.Node.Tag as NhaCungCap;
-//                DanhSachSanPham = hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoNCC(nhaCungCap.MaNhaCungCap);
-//                HienThiDanhSachSanPham(DanhSachSanPham);
-//                break;
-//            }
-//        }
-//    }
-
-//    for (int i = 0; i < tvPhanLoaiSanPham.Nodes[4].Nodes.Count; i++)
-//    {
-//        if (e.Node.Level == 1)
-//        {
-
-//            if (tvPhanLoaiSanPham.Nodes[4].Nodes[i] == e.Node)
-//            {
-//                NhaSanXuat nhaSanXuat = e.Node.Tag as NhaSanXuat;
-//                DanhSachSanPham = hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoNSX(nhaSanXuat.MaNhaSanXuat);
-//                HienThiDanhSachSanPham(DanhSachSanPham);
-//                break;
-//            }
-//        }
-//    }
-
-  
 
 

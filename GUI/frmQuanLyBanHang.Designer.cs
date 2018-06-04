@@ -123,8 +123,8 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
@@ -1217,7 +1217,7 @@
             this.TabHeThong.Name = "TabHeThong";
             this.TabHeThong.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.TabHeThong.SelectedTabIndex = 0;
-            this.TabHeThong.Size = new System.Drawing.Size(790, 264);
+            this.TabHeThong.Size = new System.Drawing.Size(790, 262);
             this.TabHeThong.TabIndex = 2;
             this.TabHeThong.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.TabHeThong.Tabs.Add(this.TabGioiThieu);
@@ -1230,7 +1230,7 @@
             this.tabControlPanel1.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(790, 238);
+            this.tabControlPanel1.Size = new System.Drawing.Size(790, 236);
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
             this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -1247,7 +1247,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(788, 236);
+            this.pictureBox1.Size = new System.Drawing.Size(788, 234);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1295,46 +1295,46 @@
             this.toolStripMenuItem2,
             this.MenuItemThoat});
             this.MenuStripHeThong.Name = "MenuStripHeThong";
-            this.MenuStripHeThong.Size = new System.Drawing.Size(170, 98);
+            this.MenuStripHeThong.Size = new System.Drawing.Size(177, 98);
             // 
             // MenuItemDongTrang
             // 
             this.MenuItemDongTrang.Image = global::GUI.Properties.Resources.close_blue;
             this.MenuItemDongTrang.Name = "MenuItemDongTrang";
-            this.MenuItemDongTrang.Size = new System.Drawing.Size(169, 22);
+            this.MenuItemDongTrang.Size = new System.Drawing.Size(176, 22);
             this.MenuItemDongTrang.Text = "Đóng Trang ";
             // 
             // MenuItemDongTrangKhac
             // 
             this.MenuItemDongTrangKhac.Image = global::GUI.Properties.Resources.Actions_window_close_icon;
             this.MenuItemDongTrangKhac.Name = "MenuItemDongTrangKhac";
-            this.MenuItemDongTrangKhac.Size = new System.Drawing.Size(169, 22);
+            this.MenuItemDongTrangKhac.Size = new System.Drawing.Size(176, 22);
             this.MenuItemDongTrangKhac.Text = "Đóng Trang Khác";
             // 
             // MenuItemDongTatCa
             // 
             this.MenuItemDongTatCa.Image = global::GUI.Properties.Resources.Delete;
             this.MenuItemDongTatCa.Name = "MenuItemDongTatCa";
-            this.MenuItemDongTatCa.Size = new System.Drawing.Size(169, 22);
+            this.MenuItemDongTatCa.Size = new System.Drawing.Size(176, 22);
             this.MenuItemDongTatCa.Text = "Đóng Tất Cả Trang ";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(166, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(173, 6);
             // 
             // MenuItemThoat
             // 
             this.MenuItemThoat.Image = global::GUI.Properties.Resources._128px_Crystal_Clear_action_exit1;
             this.MenuItemThoat.Name = "MenuItemThoat";
-            this.MenuItemThoat.Size = new System.Drawing.Size(169, 22);
+            this.MenuItemThoat.Size = new System.Drawing.Size(176, 22);
             this.MenuItemThoat.Text = "Thoát ";
             // 
             // frmQuanLyBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 421);
+            this.ClientSize = new System.Drawing.Size(800, 419);
             this.Controls.Add(this.TabHeThong);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "frmQuanLyBanHang";

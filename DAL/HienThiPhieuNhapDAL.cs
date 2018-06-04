@@ -43,6 +43,39 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public List<PhieuNhap> LayThongTinPhieuNhapTheoMa(string maSanPham)
+        {
+            try
+            {
+                List<PhieuNhap> DanhSach = new List<PhieuNhap>();
+                OpenDataBase();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.CommandText = "LayThongTinPhieuNhapTheoMa";
+                sqlCommand.Parameters.Add("@MaPhieuNhap", SqlDbType.Char).Value = maSanPham;
+                sqlCommand.Connection = sqlConnection;
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    DanhSach.Add(new PhieuNhap
+                    {
+                        MaPhieuNhap = sqlDataReader[0].ToString(),
+                        NhanVien = sqlDataReader[1].ToString(),
+                        NhaCungCap = sqlDataReader[2].ToString(),
+                        NgayNhap = DateTime.Parse(sqlDataReader[3].ToString()),
+                        KhoHang = sqlDataReader[4].ToString()
+                    });
+                }
+                sqlDataReader.Close();
+                return DanhSach;
+            }
+            catch 
+            {
+                return null;
+            }
+        }
+
         //
         public bool ThemMoiPhieuNhap(PhieuNhap phieuNhap)
         {

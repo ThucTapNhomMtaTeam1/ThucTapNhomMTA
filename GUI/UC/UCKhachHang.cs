@@ -39,7 +39,7 @@ namespace GUI.UC
             {
                 tvPhanLoaiKhachHang.Nodes[0].Nodes[1].Nodes[i].Remove();
             }
-
+           
             foreach (LoaiKhachHang loaiKhachHang in hienThiLoaiKhachHangBLL.HienThiDanhSachLoaiKhachHang()) 
             {
                 TreeNode treeNode = new TreeNode(loaiKhachHang.TenLoaiKhachHang);

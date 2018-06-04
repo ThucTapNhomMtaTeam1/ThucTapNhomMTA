@@ -10,10 +10,10 @@ namespace BLL
 {
     public class LayNgayThangBLL
     {
-        LayNgayThangDAL layNgayThangDAL = new LayNgayThangDAL(); 
+        LayNgayThangDAL layNgayThangDAL = new LayNgayThangDAL();
         public List<NgayThang> LayDanhSachCacNamPN()
         {
-            return layNgayThangDAL.LayDanhSachCacNamPN(); 
+            return layNgayThangDAL.LayDanhSachCacNamPN();
         }
 
         public List<NgayThang> LayDanhSachCacThangTheoNamPN(DateTime DateTime)
@@ -23,6 +23,21 @@ namespace BLL
         public List<NgayThang> LayDanhSachCacNgayTheoThangNamPN(DateTime DateTime)
         {
             return layNgayThangDAL.LayDanhSachCacNgayTheoThangNamPN(DateTime);
+        }
+
+        public List<NgayThang> LayDanhSachCacNamPhieuXuat()
+        {
+            return layNgayThangDAL.LayDanhSachCacNamPhieuXuat();
+        }
+
+        public List<NgayThang> LayDanhSachCacThangTheoNamPhieuXuat(DateTime DateTime)
+        {
+            return layNgayThangDAL.LayDanhSachCacThangTheoNamPhieuXuat(DateTime);
+        }
+
+        public List<NgayThang> LayDanhSachCacNgayTheoThangNamPhieuXuat(DateTime DateTime)
+        {
+            return layNgayThangDAL.LayDanhSachCacNgayTheoThangNamPhieuXuat(DateTime);
         }
     }
 }

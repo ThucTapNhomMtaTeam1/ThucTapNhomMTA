@@ -32,8 +32,8 @@ namespace DAL
                         GioiTinh = sqlDataReader[3].ToString(),
                         DiaChi = sqlDataReader[4].ToString(),
                         DienThoai = sqlDataReader[5].ToString(),
-                        LoaiKhachHang = sqlDataReader[6].ToString(),
-                        ChungMinhThu = sqlDataReader[7].ToString(),
+                        LoaiKhachHang = sqlDataReader[7].ToString(),
+                        ChungMinhThu = sqlDataReader[6].ToString(),
                     };
                     DanhSachKhachHang.Add(khachHang);
                 }
@@ -212,7 +212,7 @@ namespace DAL
                 sqlCommand.Parameters.Add("@MaKhachHang", SqlDbType.Char).Value = khachHang.MaKhachHang;
                 sqlCommand.Parameters.Add("@TenKhachHang", SqlDbType.NVarChar).Value = khachHang.TenKhachHang;
                 sqlCommand.Parameters.Add("@ChungMinhThu", SqlDbType.Char).Value = khachHang.ChungMinhThu;
-                sqlCommand.Parameters.Add("@NgaySinh", SqlDbType.DateTime).Value = khachHang.NgaySinh;
+                sqlCommand.Parameters.Add("@NgaySinh", SqlDbType.DateTime).Value = DateTime.Now;
                 sqlCommand.Parameters.Add("@GioiTinh", SqlDbType.NVarChar).Value = khachHang.GioiTinh;
                 sqlCommand.Parameters.Add("@DiaChi", SqlDbType.NVarChar).Value = khachHang.DiaChi;
                 sqlCommand.Parameters.Add("@SoDienThoai", SqlDbType.Char).Value = khachHang.DienThoai;
@@ -222,7 +222,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                return false; 
+                throw ex; 
             }
  
             

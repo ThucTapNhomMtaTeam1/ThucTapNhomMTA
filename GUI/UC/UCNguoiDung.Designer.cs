@@ -801,7 +801,7 @@
             this.bntBaoCao.TabIndex = 20;
             this.bntBaoCao.Text = "In Bản Thống Kê";
             this.bntBaoCao.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-            this.bntBaoCao.Click += new System.EventHandler(this.bntBaoCao_Click);
+
             // 
             // UCNguoiDung
             // 

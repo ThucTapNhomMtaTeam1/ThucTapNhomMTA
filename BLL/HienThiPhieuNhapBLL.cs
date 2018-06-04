@@ -37,6 +37,10 @@ namespace BLL
 
             return HienThiPhieuNhapDAL.SuaThongTinPhieuNhap(phieuNhap); 
         }
-       
+
+        public List<PhieuNhap> LayThongTinPhieuNhapTheoMa(string MaSanPham)
+        {
+            return HienThiPhieuNhapDAL.LayThongTinPhieuNhapTheoMa(MaSanPham); 
+        }
     }
 }

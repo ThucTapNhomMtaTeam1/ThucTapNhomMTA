@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
-using GUI.FormBaoCao.FormSanPham;
-using GUI.FormBaoCao.FormLoaiSanPham;
+//using GUI.FormBaoCao.FormSanPham;
+//using GUI.FormBaoCao.FormLoaiSanPham;
 
 namespace GUI.UC
 {
@@ -186,8 +186,8 @@ namespace GUI.UC
 
         private void bntBaoCao_Click(object sender, EventArgs e)
         {
-            FormBaoCaoLoaiSanPham frm = new FormBaoCaoLoaiSanPham();
-            frm.Show();
+            ////FormBaoCaoLoaiSanPham frm = new FormBaoCaoLoaiSanPham();
+            //frm.Show();
         }
     }
 }

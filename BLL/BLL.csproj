@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="HienThiBaoHanhBLL.cs" />
     <Compile Include="HienThiCT_PhieuNhapBLL.cs" />
+    <Compile Include="HienThiCT_PhieuXuatBLL.cs" />
     <Compile Include="HienThiKhachHangBLL.cs" />
     <Compile Include="HienThiKhoHangBLL.cs" />
     <Compile Include="HienThiLoaiKhachHangBLL.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="HienThiNhanVienBLL.cs" />
     <Compile Include="HienThiNhaSanXuatBLL.cs" />
     <Compile Include="HienThiPhieuNhapBLL.cs" />
+    <Compile Include="HienThiPhieuXuatBLL.cs" />
     <Compile Include="HienThiSanPhamBLL.cs" />
     <Compile Include="LayNgayThangBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

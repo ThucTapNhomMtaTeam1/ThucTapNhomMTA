@@ -88,7 +88,85 @@ namespace DAL
             }
         }
 
+        public List<NgayThang> LayDanhSachCacNamPhieuXuat()
+        {
+            try
+            {
+                List<NgayThang> DanhSach = new List<NgayThang>();
+                OpenDataBase();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.CommandText = "LayDanhSachNamPhieuXuat";
+                sqlCommand.Connection = sqlConnection;
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    DateTime dateTime = new DateTime(int.Parse(sqlDataReader[0].ToString()), 1, 1);
+                    DanhSach.Add(new NgayThang { NgayThangNam = dateTime });
+                }
+                sqlDataReader.Close();
+                return DanhSach;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<NgayThang> LayDanhSachCacThangTheoNamPhieuXuat(DateTime DateTime)
+        {
+            try
+            {
+                List<NgayThang> DanhSach = new List<NgayThang>();
+                OpenDataBase();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.CommandText = "LayThangCuaPhieuXuatTheoNam";
+                sqlCommand.Parameters.Add("@Nam", SqlDbType.DateTime).Value = DateTime;
+                sqlCommand.Connection = sqlConnection;
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    DateTime dateTime = new DateTime(DateTime.Year, int.Parse(sqlDataReader[0].ToString()), 1);
+                    DanhSach.Add(new NgayThang { NgayThangNam = dateTime });
+                }
+                sqlDataReader.Close();
+                return DanhSach;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<NgayThang> LayDanhSachCacNgayTheoThangNamPhieuXuat(DateTime DateTime)
+        {
+            try
+            {
+                List<NgayThang> DanhSach = new List<NgayThang>();
+                OpenDataBase();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.CommandText = "LayNgayTheoThangNamCuaPhieuXuat";
+                sqlCommand.Parameters.Add("@Nam", SqlDbType.DateTime).Value = DateTime;
+                sqlCommand.Connection = sqlConnection;
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    DateTime dateTime = new DateTime(DateTime.Year, DateTime.Month, int.Parse(sqlDataReader[0].ToString()));
+                    DanhSach.Add(new NgayThang { NgayThangNam = dateTime });
+                }
+                sqlDataReader.Close();
+                return DanhSach;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
+
+   
 }
 /*
  

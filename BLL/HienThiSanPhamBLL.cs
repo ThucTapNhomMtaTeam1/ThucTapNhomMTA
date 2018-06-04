@@ -71,5 +71,10 @@ namespace BLL
         {
              hienThiSanPhamDAL.ChinhSuaSoLuongSanPham(maSanPham, soLuongSP);
         }
+
+        public void CapNhapSoLuongSanPham(string MaSanPham, int soLuongSP)
+        {
+          //  hienThiSanPhamDAL.ChinhSuaSoLuongSanPham(MaSanPham, soLuongSP); 
+        }
     }
 }

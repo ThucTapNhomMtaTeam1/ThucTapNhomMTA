@@ -26,7 +26,10 @@ namespace GUI.UC
                 cbLoaiKhachHang.Items.Add(loaiKhachHang);
             }
             HienThiDanhSachDonHang(hienThiPhieuXuatBLL.LayToanBoPhieuXuat());
+
+            
         }
+
         private void HienThiCacNamTreeView()
         {
             for (int i = 1; i < tvPhanLoaiHoaDon.Nodes.Count; i++)
@@ -76,7 +79,9 @@ namespace GUI.UC
             }
         }
 
+
         public DateTime DateTime; 
+
         private void tvPhanLoaiHoaDon_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node != null)
@@ -145,6 +150,9 @@ namespace GUI.UC
                 }
                 txtMaKhachHang.Text = dataGridViewRow.Cells[3].Value + "";
                 HienThiKhachHangTheoMa(txtMaKhachHang.Text);
+                HienThiCT_PhieuXuatBLL HienThiCT_PhieuXuatBLL = new HienThiCT_PhieuXuatBLL(); 
+                HienThiDanhSachCT_PhieuXuat(HienThiCT_PhieuXuatBLL.HienThiChiTietPhieuXuatTheoMa
+                    (dataGridViewRow.Cells[0].Value + "")); 
             }
         }
 
@@ -159,8 +167,14 @@ namespace GUI.UC
                 {
                     CbNhanViens.Items.Add(NhanVien);
                 }
+                HienThiSanPhamBLL hienThiSanPhamBLL = new HienThiSanPhamBLL();
+                foreach (SanPham sa in hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoKho(khoHang.MaKhoHang))
+                {
+                    cbNhanVien.Items.Add(sa);
+                }
             }
-            
+            HienThiDanhSachSanPham();
+
         }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
@@ -196,8 +210,6 @@ namespace GUI.UC
             txtMaKhachHang.Text = "";
         }
 
-
-
         public void HienThiKhachHangTheoMa(string MaKhachHang)
         {
             HienThiKhachHangBLL hienThiKhachHangBLL = new HienThiKhachHangBLL();
@@ -222,6 +234,7 @@ namespace GUI.UC
                 }
             }
         }
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             HienThiKhachHangTheoMa(txtMaKhachHang.Text); 
@@ -353,6 +366,144 @@ namespace GUI.UC
             HienThiPhieuXuatBLL hienThiPhieuXuatBLL = new HienThiPhieuXuatBLL();
             hienThiPhieuXuatBLL.CapNhapThongTinPhieuXuat(phieuXuat);
             HienThiDanhSachDonHang(hienThiPhieuXuatBLL.LayToanBoPhieuXuat());
+        }
+
+        //----------------------------------------------------------------------------------------------------
+
+        public void HienThiDanhSachCT_PhieuXuat(List<CT_PhieuXuat> DanhSach)
+        {
+            gv_CT_PhieuXuat.Rows.Clear();
+
+            foreach (CT_PhieuXuat px in DanhSach)
+            {
+                DataGridViewRow dataGridViewRow = new DataGridViewRow();
+                dataGridViewRow.CreateCells(gv_CT_PhieuXuat);
+                dataGridViewRow.Cells[0].Value = px.MaPhieuXuat;
+                dataGridViewRow.Cells[1].Value = px.MaSanPham;
+                dataGridViewRow.Cells[2].Value = px.TenSanPham;
+                dataGridViewRow.Cells[3].Value = px.DonGia;
+                dataGridViewRow.Cells[4].Value = px.SoLuong;
+                dataGridViewRow.Cells[5].Value = px.TongTien;
+                gv_CT_PhieuXuat.Rows.Add(dataGridViewRow);
+            }
+        }
+
+
+        public void HienThiDanhSachSanPham()
+        {
+            if(cbKhoHang.SelectedIndex != -1)
+            {
+                
+            }
+        }
+
+        private void cbNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbNhanVien.SelectedIndex != -1)
+            {
+                SanPham sanPham = cbNhanVien.SelectedItem as SanPham ;
+                texDonGiaBan.Text = sanPham.DonGia+"";
+                texSoLuongTon.Text = sanPham.SoLuong + ""; 
+            }
+        }
+
+
+        public List<CT_PhieuXuat> DanhSachDatHang = new List<CT_PhieuXuat>();
+
+        private void btnLLuuSP_Click(object sender, EventArgs e)
+        {
+            int SoLuonSanPhamTon = int.Parse(texSoLuongTon.Text); 
+
+            if (SoLuonSanPhamTon <= 0)
+            {
+                MessageBox.Show("Sản Phẩm Cần Mua Đã Hết Hàng");
+                return; 
+            }
+
+            SanPham sanPham = cbNhanVien.SelectedItem as SanPham;
+            CT_PhieuXuat cT_PhieuXuat = new CT_PhieuXuat()
+            {
+                MaPhieuXuat = texMaHoaDon.Text,
+                MaSanPham = sanPham.MaSanPham,
+                SoLuong = int.Parse(texSoLuongDat.Text),
+                TongTien = double.Parse(texSoLuongDat.Text) * double.Parse(texDonGiaBan.Text),
+                DonGia = double.Parse(texDonGiaBan.Text)
+            };
+
+            int k = 0;
+            if (DanhSachDatHang.Count != 0)
+            {
+                foreach (CT_PhieuXuat sp in DanhSachDatHang)
+                {
+                    if (cT_PhieuXuat.MaSanPham == sp.MaSanPham && cT_PhieuXuat.MaPhieuXuat == sp.MaPhieuXuat)
+                    {
+                        SoLuonSanPhamTon -= cT_PhieuXuat.SoLuong;
+                        texSoLuongTon.Text = SoLuonSanPhamTon + ""; 
+                        sp.SoLuong += cT_PhieuXuat.SoLuong;
+                        sp.TongTien += cT_PhieuXuat.TongTien; 
+                        break;
+                    }
+                    k++;
+                    if (k == DanhSachDatHang.Count && sp.MaPhieuXuat != cT_PhieuXuat.MaSanPham && cT_PhieuXuat.MaPhieuXuat == sp.MaPhieuXuat)
+                    {
+                        SoLuonSanPhamTon -= cT_PhieuXuat.SoLuong;
+                        texSoLuongTon.Text = SoLuonSanPhamTon + "";
+                        DanhSachDatHang.Add(cT_PhieuXuat);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                SoLuonSanPhamTon -= cT_PhieuXuat.SoLuong;
+                texSoLuongTon.Text = SoLuonSanPhamTon + "";
+                DanhSachDatHang.Add(cT_PhieuXuat);
+            }
+            HienThiDanhSachCT_PhieuXuat(DanhSachDatHang); 
+        }
+
+
+        public void LuuThongTinHoaDon()
+        {
+            HienThiCT_PhieuXuatBLL hienThiCT_PhieuXuatBLL = new HienThiCT_PhieuXuatBLL(); 
+            foreach (CT_PhieuXuat ct in DanhSachDatHang)
+            {
+                hienThiCT_PhieuXuatBLL.ThemMoiChiTietPhieuXuat(ct);  
+            }
+
+        }
+
+        public void CapNhapNhapLaiKhoHang(string MaHoaDon,int SoLuongSP)
+        {
+            HienThiSanPhamBLL hienThiSanPhamBLL = new HienThiSanPhamBLL();
+            hienThiSanPhamBLL.CapNhapSoLuongSanPham(MaHoaDon, SoLuongSP); 
+        }
+
+        private void btnThemMoiSP_Click(object sender, EventArgs e)
+        {
+            cbNhanVien.SelectedIndex = -1;
+            texSoLuongTon.Text = "";
+            texSoLuongDat.Text = "";
+            texDonGiaBan.Text = "";
+            texTongTien.Text = ""; 
+        }
+
+        private void btnCapNhapKhoHang_Click(object sender, EventArgs e)
+        {
+            if(cbKhoHang.SelectedIndex == -1)
+            {
+                MessageBox.Show("Cần Chọn Thông Tin Kho Hàng Cần Cập Nhập");
+                return; 
+            }
+            if(cbNhanVien.SelectedIndex == -1)
+            {
+                MessageBox.Show("Cần Chọn Thông Tin Sản Phẩm Cần Cập Nhâp");
+                return;
+            }
+
+            SanPham sanPham = cbNhanVien.SelectedItem as SanPham; 
+            CapNhapNhapLaiKhoHang(sanPham.MaSanPham,int.Parse(texSoLuongTon.Text));
+            LuuThongTinHoaDon(); 
         }
     }
 }

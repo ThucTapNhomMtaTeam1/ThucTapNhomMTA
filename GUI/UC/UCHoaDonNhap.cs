@@ -178,7 +178,7 @@ namespace GUI.UC
             {
                 foreach (CT_PhieuNhap sp in DanhSachSanPhamTheoHoaDơn)
                 {
-                    if (cT_PhieuNhap.SanPham == sp.SanPham && cT_PhieuNhap.MaPhieuNhap == sp.MaPhieuNhap)
+                    if (cT_PhieuNhap.SanPham == sp.SanPham && cT_PhieuNhap.MaPhieuNhap == sp.MaPhieuNhap )
                     {
                         sp.SoLuong += cT_PhieuNhap.SoLuong;
                         break;
@@ -200,6 +200,11 @@ namespace GUI.UC
 
         private void CapNhapLaiKhoHang()
         {
+            if(cbKhoHang.SelectedIndex == -1)
+            {
+                MessageBox.Show("Bạn Cần Chọn Kho Hàng Cần Cập Nhập");
+                return; 
+            }
             KhoHang khoHang = cbKhoHang.SelectedItem as KhoHang;
             List<SanPham> DanhSach = new List<SanPham>();
             NhaCungCap nhacungcap = cbNhaCungCap.SelectedItem as NhaCungCap; 
@@ -229,11 +234,11 @@ namespace GUI.UC
                 {
                     hienThiSanPhamBLL.ThemMoiSanPham(sp1);
                 }
-                else
+                else if(ketQua[0].KhoHang == khoHang.MaKhoHang)
                 {
                     int SoLuongSP = ketQua[0].SoLuong + sp1.SoLuong;
                     hienThiSanPhamBLL.ChinhSuaSoLuongSanPham(sp1.MaSanPham, SoLuongSP);
-                }
+                }  
             }
         }
 
@@ -328,26 +333,57 @@ namespace GUI.UC
 
         private void btnXoaSP_Click(object sender, EventArgs e)
         {
-            if(texMaSP.Text== null)
-            {
-                MessageBox.Show("Ban can Cap Nhap Ma San Pham Truoc Khi Xoa");
-                return; 
-            }
-            if(texMaHoaDon.Text == null)
-            {
-                MessageBox.Show("Ban can Nhap Ma Hoa Don Truoc Khi Xoa");
-                return; 
-            }
-            if(cbKhoHang.SelectedItem == null)
-            {
-                MessageBox.Show("Ban Can Chon Kho Hang Truoc Khi Xoa");
-                return;
-
-            }
             KhoHang khoHang = cbKhoHang.SelectedItem as KhoHang; 
-            HienThiCT_PhieuNhapBLL hienThiCT_PhieuNhapBLL = new HienThiCT_PhieuNhapBLL();
-            hienThiCT_PhieuNhapBLL.XoaCt_PhieuNhap(texMaHoaDon.Text, texMaSP.Text, khoHang,int.Parse(texSoLuong.Text));
-            HienThiDanhSachSanPhamHD(hienThiCT_PhieuNhapBLL.HienThiDanhSachSPTheoMaPhieu(texMaHoaDon.Text));
+            HienThiSanPhamBLL hienThiSanPhamBLL = new HienThiSanPhamBLL();
+            int k = 0; 
+            foreach(SanPham Sp in hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoKho(khoHang.MaKhoHang))
+            {
+                k++; 
+                if(Sp.MaSanPham.Trim() == texMaSP.Text.Trim())
+                {
+                    texMaSP.Text = Sp.MaSanPham;
+                    texTenSP.Text = Sp.TenSanPham;
+                    break; 
+                }
+                if(k == hienThiSanPhamBLL.HienThiDanhSachSanPhamTheoKho(khoHang.MaKhoHang).Count && Sp.MaSanPham.Trim() != texMaSP.Text.Trim())
+                {
+                    int h = 0; 
+                    foreach (SanPham Sp1 in hienThiSanPhamBLL.HienThiDanhSachSanPham())
+                    {
+                        h++; 
+                        if(Sp1.MaSanPham.Trim() == texMaSP.Text.Trim())
+                        {
+                            MessageBox.Show("Sản Phẩm Chưa Tồn Tại Trong Kho Hàng Nhưng Đã Tồn Tại Mã Trong Hệ Thông Bạn Cần Chọn Mã Sản Phẩm Khác");
+                            return; 
+                        }
+                        else if(h == hienThiSanPhamBLL.HienThiDanhSachSanPham().Count && Sp1.MaSanPham.Trim() != texMaSP.Text.Trim())
+                        {
+                            MessageBox.Show("Sản Phẩm Chưa Tồn Tại Trong Kho Mã Sản Phẩm Hợp Lệ");
+                            break; 
+                        }
+                    }   
+                }
+            }
+            //if(texMaSP.Text== null)
+            //{
+            //    MessageBox.Show("Ban can Cap Nhap Ma San Pham Truoc Khi Xoa");
+            //    return; 
+            //}
+            //if(texMaHoaDon.Text == null)
+            //{
+            //    MessageBox.Show("Ban can Nhap Ma Hoa Don Truoc Khi Xoa");
+            //    return; 
+            //}
+            //if(cbKhoHang.SelectedItem == null)
+            //{
+            //    MessageBox.Show("Ban Can Chon Kho Hang Truoc Khi Xoa");
+            //    return;
+
+            //}
+            //KhoHang khoHang = cbKhoHang.SelectedItem as KhoHang; 
+            //HienThiCT_PhieuNhapBLL hienThiCT_PhieuNhapBLL = new HienThiCT_PhieuNhapBLL();
+            //hienThiCT_PhieuNhapBLL.XoaCt_PhieuNhap(texMaHoaDon.Text, texMaSP.Text, khoHang,int.Parse(texSoLuong.Text));
+            //HienThiDanhSachSanPhamHD(hienThiCT_PhieuNhapBLL.HienThiDanhSachSPTheoMaPhieu(texMaHoaDon.Text));
         }
 
         private void gvSanPhamTheoHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -381,8 +417,9 @@ namespace GUI.UC
             {
                 HienThiCT_PhieuNhapBLL.ThemMoiCT_PhieuNhap(ct); 
             }
-            
             DanhSachSanPhamTheoHoaDơn = HienThiCT_PhieuNhapBLL.HienThiDanhSachSPTheoMaPhieu(texMaHoaDon.Text);
+
+        
         }
 
         private void btnSuaSP_Click(object sender, EventArgs e)

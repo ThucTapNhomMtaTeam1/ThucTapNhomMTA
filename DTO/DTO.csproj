@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BaoHanh.cs" />
     <Compile Include="CT_PhieuNhap.cs" />
+    <Compile Include="CT_PhieuXuat.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="KhoHang.cs" />
     <Compile Include="LoaiKhachHang.cs" />
